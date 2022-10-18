@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Flex, Link as LinkChakra, Grid, Button } from '@chakra-ui/react';
+import { Flex, Link as LinkChakra, Grid } from '@chakra-ui/react';
 
 import { Contacts } from './Contacts';
 
