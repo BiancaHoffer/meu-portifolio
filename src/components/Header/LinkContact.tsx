@@ -12,7 +12,6 @@ interface LinkContactProps extends ChakraProps{
   icon: any;
 }
 
-
 export function LinkContact({ href, name, icon, ...rest }: LinkContactProps) {
   return (
     <Link href={href} passHref>
@@ -22,6 +21,11 @@ export function LinkContact({ href, name, icon, ...rest }: LinkContactProps) {
         padding="8px"
         display="flex"
         alignItems="center"
+        _hover={{
+          textDecoration: 'none',
+          paddingLeft: '4px',
+          transition: '0.3s'
+        }}
         {...rest}
       >
         <Icon 
@@ -29,7 +33,7 @@ export function LinkContact({ href, name, icon, ...rest }: LinkContactProps) {
           w="26px" 
           h="26px" 
           color='#DB2090' 
-          style={{paddingRight: '8px'}}
+          paddingRight="8px"
         />
         { name }
       </LinkChakra>

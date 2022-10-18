@@ -1,8 +1,6 @@
-import Link from 'next/link';
-
 import {
   Button,
-  Link as LinkChakra, 
+  Icon,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -13,13 +11,24 @@ import {
 import { AiFillCaretDown, AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp } from "react-icons/ai";
 import { LinkContact } from './LinkContact';
 
-export function PopoverContact() {
+export function Contacts() {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button variant='solid' colorScheme='transparent' padding="4px">
+        <Button 
+          variant='solid' 
+          colorScheme='transparent' 
+          padding="4px"
+          color="gray.300"
+          _hover={{color: 'white', transparent: '0.4s'}}
+        >
           Contato
-          <AiFillCaretDown color='#DB2090'style={{paddingLeft:"2px", paddingTop:"4px"}}/>
+          <Icon 
+            as={AiFillCaretDown} 
+            color='#DB2090' 
+            paddingLeft="2px" 
+            paddingTop="4px"
+          />
         </Button>
       </PopoverTrigger>
       

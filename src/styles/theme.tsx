@@ -10,6 +10,7 @@ export const theme = extendTheme({
         },
         gray: {
             "50": "#F8F8F8",
+            "300": "#585656",
             "400": "#282727",
             "800": "#141414",
         }
@@ -23,7 +24,14 @@ export const theme = extendTheme({
             body: {
                 bg: 'gray.800',
                 color: 'gray.50'
+            },
+        },
+        a: {
+           
+            _hover: {
+                textDecoration: "none",
             }
+            
         }
     }
 })
