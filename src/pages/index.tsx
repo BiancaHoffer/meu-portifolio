@@ -1,6 +1,6 @@
 import Head from 'next/head';
+import { Flex, VStack, Text } from '@chakra-ui/react'
 import { Banner } from '../components/Banner';
-import { Flex, VStack } from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -11,6 +11,10 @@ export default function Home() {
 
       <VStack as='main'>
         <Banner />
+
+        <VStack>
+          <Text>Teste</Text>
+        </VStack>
       </VStack>
     </>
   )

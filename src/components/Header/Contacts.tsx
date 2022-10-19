@@ -19,6 +19,7 @@ export function Contacts() {
           variant='solid' 
           colorScheme='transparent' 
           padding="4px"
+          fontSize={["14px", "18px"]}
           color="gray.300"
           _hover={{color: 'white', transparent: '0.4s'}}
         >

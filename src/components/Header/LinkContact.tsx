@@ -17,10 +17,12 @@ export function LinkContact({ href, name, icon, ...rest }: LinkContactProps) {
     <Link href={href} passHref>
       <LinkChakra
         isExternal
+        fontSize={["14px", "18px"]}
         variant='with-shadow'
         padding="8px"
         display="flex"
         alignItems="center"
+        color="white.100"
         _hover={{
           textDecoration: 'none',
           paddingLeft: '4px',

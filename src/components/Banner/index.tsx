@@ -1,5 +1,6 @@
-import { Flex } from '@chakra-ui/react'
-import styles from '../styles/banner.module.scss';
+import { Flex } from '@chakra-ui/react';
+import styles from './banner.module.scss';
+import { Heading } from './Heading';
 
 export function Banner() {
   return (
@@ -20,6 +21,8 @@ export function Banner() {
       >
         <source src="/videos/galaxy.mp4" />
       </video>
+
+      <Heading />
     </Flex>
   );
 }

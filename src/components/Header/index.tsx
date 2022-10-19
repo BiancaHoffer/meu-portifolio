@@ -26,10 +26,11 @@ export function Header() {
         <Flex justify='space-between' align="center">
           <Link href="/" passHref>
             <LinkChakra 
+              fontSize={["14px", "18px"]}
               fontWeight="bold" 
               padding="4px" 
               color="gray.300" 
-              _hover={{textDecoration: 'none', transition: '0.4s', color:'white'}}
+              _hover={{textDecoration: 'none', transition: '0.4s', color:'white.100'}}
             >
               Início
             </LinkChakra>
@@ -37,10 +38,11 @@ export function Header() {
 
           <Link href="#" passHref>
             <LinkChakra 
+              fontSize={["14px", "18px"]}
               fontWeight="bold" 
               padding="4px" 
               color="gray.300" 
-              _hover={{textDecoration: 'none', transition: '0.4s', color:'white'}}
+              _hover={{textDecoration: 'none', transition: '0.4s', color:'white.100'}}
             >
               Projetos
             </LinkChakra>
