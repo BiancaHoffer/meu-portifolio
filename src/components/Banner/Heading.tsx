@@ -42,7 +42,7 @@ export function Heading() {
       fontWeight="500"
       textAlign="center"
     >
-      Sou desenvolvera front-end
+      Sou desenvolvedora front-end
     </H1>
 
     <ButtonBanner />

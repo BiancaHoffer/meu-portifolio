@@ -14,9 +14,9 @@ export function Header() {
       borderColor="gray.400"
     >
       <Grid
-        width="1140px"
-        margin="0 auto"
-        paddingX="52px"
+        w="1140px"
+        m="0 auto"
+        px="52px"
         justifyContent="center"
         alignItems="center"
         templateColumns="repeat(3, 1fr)"
@@ -28,7 +28,7 @@ export function Header() {
             <LinkChakra 
               fontSize={["14px", "18px"]}
               fontWeight="bold" 
-              padding="4px" 
+              p="4px" 
               color="gray.300" 
               _hover={{textDecoration: 'none', transition: '0.4s', color:'white.100'}}
             >
@@ -40,7 +40,7 @@ export function Header() {
             <LinkChakra 
               fontSize={["14px", "18px"]}
               fontWeight="bold" 
-              padding="4px" 
+              p="4px" 
               color="gray.300" 
               _hover={{textDecoration: 'none', transition: '0.4s', color:'white.100'}}
             >

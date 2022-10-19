@@ -19,7 +19,7 @@ export function LinkContact({ href, name, icon, ...rest }: LinkContactProps) {
         isExternal
         fontSize={["14px", "18px"]}
         variant='with-shadow'
-        padding="8px"
+        p="8px"
         display="flex"
         alignItems="center"
         color="white.100"

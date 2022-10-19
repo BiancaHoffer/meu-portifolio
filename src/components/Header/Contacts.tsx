@@ -18,7 +18,7 @@ export function Contacts() {
         <Button 
           variant='solid' 
           colorScheme='transparent' 
-          padding="4px"
+          p="4px"
           fontSize={["14px", "18px"]}
           color="gray.300"
           _hover={{color: 'white', transparent: '0.4s'}}
@@ -28,7 +28,6 @@ export function Contacts() {
             as={AiFillCaretDown} 
             color='#DB2090' 
             paddingLeft="2px" 
-            paddingTop="4px"
           />
         </Button>
       </PopoverTrigger>
