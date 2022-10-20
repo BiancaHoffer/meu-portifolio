@@ -9,9 +9,10 @@ import {
 } from '@chakra-ui/react';
 
 import { AiFillCaretDown, AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp } from "react-icons/ai";
+
 import { LinkContact } from './LinkContact';
 
-export function Contacts() {
+export function ButtonContacts() {
   return (
     <Popover>
       <PopoverTrigger>

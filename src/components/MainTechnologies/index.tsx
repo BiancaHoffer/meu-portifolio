@@ -12,7 +12,7 @@ export function MainTechnologies() {
         <Heading
           fontSize={["38px", "42px", "60px", "60px"]}
           display="block"
-          marginBottom="80px"
+          marginBottom={["40px", "80px", "100px", "100px"]}
         >
           Principais Tecnologias
         </Heading>

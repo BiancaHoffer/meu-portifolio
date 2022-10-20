@@ -22,7 +22,7 @@ export default function Home() {
           w="100%"
           maxWidth="1140px"
           marginX="0 auto"
-          paddingY="120px"
+          paddingY={["80px", "140px", "200px", "200px"]}
           px="52px"
           borderBottom="1px"
           borderColor="gray.400"
@@ -34,10 +34,8 @@ export default function Home() {
           w="100%"
           maxWidth="1140px"
           marginX="0 auto"
-          paddingY="120px"
+          paddingY={["80px", "140px", "200px", "200px"]}
           px="52px"
-          borderBottom="1px"
-          borderColor="gray.400"
         >
           <MainTechnologies />
         </VStack>
