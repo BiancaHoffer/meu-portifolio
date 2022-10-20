@@ -13,6 +13,7 @@ export function Memoji() {
           borderRadius="50%"
           justify="center"
           align="center"
+          data-aos="zoom-in"
         >
           <Image 
             src="/images/me.svg" 

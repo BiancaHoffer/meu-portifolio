@@ -6,12 +6,12 @@ export function AboutMeText() {
         maxWidth="640px" 
         display="flex" 
         flexDirection="column" 
-        alignItems="start"
+        data-aos="fade-down"
       >
         <Heading 
-          fontSize={["38px", "42px", "60px", "60px"]} 
-          display="block" 
+          fontSize={["34px", "42px", "60px", "60px"]} 
           marginBottom={["40px", "80px", "100px", "100px"]}
+          textAlign={["center", "center", "start", "start"]}
         >
           Sobre mim
         </Heading>

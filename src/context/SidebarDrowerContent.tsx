@@ -10,7 +10,7 @@ type idebarDrowerContextData = UseDisclosureReturn
 
 const SidebarDrowerContext = createContext({} as idebarDrowerContextData);
 
-export function SidebarDrowerProvider({children}: SidebarDrowerContextProps) {
+export function SidebarDrowerProvider({ children }: SidebarDrowerContextProps) {
     const disclosure = useDisclosure()
     const router = useRouter()
 

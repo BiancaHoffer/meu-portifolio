@@ -29,18 +29,19 @@ export function Heading() {
     }}
   >
     <Text 
-      fontSize={["14px", "20px", "42px","42px"]}
+      fontSize={["16px", "18px", "26px","32px"]}
       fontWeight="500"
       textAlign="center"
       marginBottom={["4px", "6px"]}
-
+      data-aos="fade-down"
     >
       Olá, meu nome é Bianca 👋
     </Text>
     <H1
-      fontSize={["24px", "40px", "72px","72px"]}
+      fontSize={["34px", "42px", "60px", "72px"]} 
       fontWeight="500"
       textAlign="center"
+      data-aos="fade-down"
     >
       Sou desenvolvedora front-end
     </H1>

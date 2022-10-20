@@ -12,6 +12,7 @@ export function ButtonBanner() {
             p={["20px", "28px", "32px", "32px"]}
             bgColor="gray.800"
             borderRadius="4px"
+            data-aos="zoom-in"
             _hover={{
                 transition: '0.4s',
                 filter: 'brightness(0.8)'
