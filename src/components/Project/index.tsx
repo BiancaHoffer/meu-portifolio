@@ -38,7 +38,7 @@ export function Project() {
             fontSize={["1rem", "2.5rem", "3.5rem", "4.5rem"]}
             mb={["0.5rem", "1rem","2.5rem"]}
             >
-              Ig.news
+              Ig.newss
             </Heading>
             <Button
               fontSize={["0.5rem", "1.5rem", "1.6rem","2rem"]}
