@@ -22,7 +22,7 @@ export function Project() {
         data-aos="fade-right"
       >
         <Image 
-          src="/images/me.svg"  
+          src="/images/ignews.png"  
           alt="imagem projeto" 
           borderRadius="4px" 
           
