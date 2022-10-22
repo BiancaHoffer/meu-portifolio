@@ -9,7 +9,7 @@ export function AboutMeText() {
         data-aos="fade-down"
       >
         <Heading 
-          fontSize={["34px", "42px", "60px", "60px"]} 
+          fontSize={["2rem", "2.5rem", "3.5rem", "4.5rem"]}
           marginBottom={["40px", "80px", "100px", "100px"]}
           textAlign={["center", "center", "start", "start"]}
         >
@@ -18,7 +18,7 @@ export function AboutMeText() {
 
         <Text 
           textAlign="justify" 
-          fontSize={["16px", "18px", "22px", "22px"]}
+          fontSize={["1rem", "1.5rem", "1.6rem","2rem"]}
           width={["200px", "400px", "600px", "600px"]}
         >
           Sou desenvolvera desde 2021, focada em web e mobile, sempre busco criar páginas modernas e 

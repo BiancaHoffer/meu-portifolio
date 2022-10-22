@@ -22,7 +22,8 @@ export function ButtonContacts() {
           p="4px"
           fontSize={["14px", "18px"]}
           color="gray.300"
-          _hover={{color: 'white', transparent: '0.4s'}}
+          transition="0.4s"
+          _hover={{color: 'white'}}
         >
           Contato
           <Icon 

@@ -1,0 +1,7 @@
+{
+  "apiEndpoint": "https://portfolio-by-biancahoffer.prismic.io/api/v2",
+  "libraries": [
+    "@/slices"
+  ],
+  "_latest": "0.5.1"
+}

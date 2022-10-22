@@ -6,13 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.6",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@iconify/react": "^4.0.0",
+    "@prismicio/client": "^6.7.1",
+    "@prismicio/helpers": "^2.3.5",
+    "@prismicio/react": "^2.5.0",
+    "@prismicio/slice-simulator-react": "^0.2.2",
     "@types/aos": "^3.0.4",
     "aos": "^2.3.4",
     "framer-motion": "^7.5.4",
@@ -23,10 +28,12 @@
     "sass": "^1.55.0"
   },
   "devDependencies": {
+    "@prismicio/types": "^0.2.3",
     "@types/node": "^18.11.0",
     "@types/react": "^18.0.21",
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1",
+    "slice-machine-ui": "^0.5.1",
     "typescript": "^4.8.4"
   }
 }

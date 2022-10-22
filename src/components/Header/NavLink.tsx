@@ -14,7 +14,8 @@ export function NavLink({ title, href }: NavLinkProps) {
             fontWeight="bold" 
             p="4px" 
             color="gray.300" 
-            _hover={{textDecoration: 'none', transition: '0.4s', color:'white.100'}}
+            transition="0.4s"
+            _hover={{textDecoration: 'none', color:'white.100'}}
         >
             {title}
         </LinkChakra>

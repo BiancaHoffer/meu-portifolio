@@ -13,6 +13,7 @@ export function Heading() {
       align="center"
       paddingX="52px"
       paddingY="440px" 
+      data-aos="fade-up"
       sx={{
         '@media (max-width: 1600px)': { 
           paddingY: '320px',
@@ -33,7 +34,6 @@ export function Heading() {
       fontWeight="500"
       textAlign="center"
       marginBottom={["4px", "6px"]}
-      data-aos="fade-down"
     >
       Olá, meu nome é Bianca 👋
     </Text>
@@ -41,7 +41,6 @@ export function Heading() {
       fontSize={["34px", "42px", "60px", "72px"]} 
       fontWeight="500"
       textAlign="center"
-      data-aos="fade-down"
     >
       Sou desenvolvedora front-end
     </H1>

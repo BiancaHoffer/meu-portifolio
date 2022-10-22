@@ -18,15 +18,31 @@ export function Footer() {
     >
       <Flex mb="32px">
         <Link href={pathname}>
-          <Button w="120px" mx="8px"bgColor="gray.400" color="white.100" data-aos="zoom-in">
-            Volta ao topo
-          </Button>
+          <LinkChakra data-aos="zoom-in" _hover={{ textDecoration: "none" }}>
+            <Button
+              w="120px" 
+              mx="8px"
+              bgColor="gray.400" 
+              color="white.100" 
+              transition="0.3s" 
+              _hover={{ filter: 'brightness(0.8)' }} 
+            >
+              Volta ao topo
+            </Button>
+          </LinkChakra>
         </Link>
         
         {pathname === "/" ? (
-          <Link href="/projects">
-            <LinkChakra>
-              <Button w="120px" mx="8px"bgColor="gray.400" color="white.100" data-aos="zoom-in">
+          <Link href="/projects" passHref>
+            <LinkChakra data-aos="zoom-in" _hover={{ textDecoration: "none" }}>
+              <Button 
+                w="120px"
+                mx="8px" 
+                bgColor="gray.400" 
+                color="white.100" 
+                transition="0.3s" 
+                _hover={{ filter: 'brightness(0.8)' }}
+              >
                 Projetos
               </Button>
             </LinkChakra>

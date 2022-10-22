@@ -4,7 +4,12 @@ import Link from 'next/link';
 export function ButtonBanner() {
   return (
     <Link href="/projects" passHref>
-      <LinkChakra>
+      <LinkChakra
+        data-aos="zoom-in"
+        _hover={{
+          textDecoration: "none"
+        }}
+      >
         <Button
             marginTop={["30px", "38px", "48px", "48px"]}
             fontSize={["14px", "18px", "20px"]}
@@ -12,10 +17,9 @@ export function ButtonBanner() {
             p={["20px", "28px", "32px", "32px"]}
             bgColor="gray.800"
             borderRadius="4px"
-            data-aos="zoom-in"
+            transition="0.3s"
             _hover={{
-                transition: '0.4s',
-                filter: 'brightness(0.8)'
+                filter: 'brightness(0.8)',
             }}
         >
             Projetos

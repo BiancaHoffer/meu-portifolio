@@ -23,10 +23,10 @@ export function LinkContact({ href, name, icon, ...rest }: LinkContactProps) {
         display="flex"
         alignItems="center"
         color="white.100"
+        transition="0.3s"
         _hover={{
           textDecoration: 'none',
           paddingLeft: '4px',
-          transition: '0.3s'
         }}
         {...rest}
       >

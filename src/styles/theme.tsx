@@ -26,7 +26,6 @@ export const theme = extendTheme({
             },
         },
         a: {
-           
             _hover: {
                 textDecoration: "none",
             }
