@@ -22,7 +22,7 @@ export function Project() {
         data-aos="fade-right"
       >
         <Image 
-          src="/images/worldtrip.png"  
+          src="/images/spacetraveling.png"  
           alt="imagem projeto" 
           borderRadius="4px" 
           
