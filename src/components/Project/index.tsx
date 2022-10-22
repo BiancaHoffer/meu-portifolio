@@ -25,11 +25,7 @@ export function Project() {
           src="/images/ignews.png" 
           alt="imagem projeto" 
           borderRadius="4px" 
-          opacity="0.1"
-          transition="0.8s"
-          _hover={{
-            opacity: "0.6",
-          }}
+          
         />
 
         <Flex 
@@ -65,3 +61,10 @@ export function Project() {
     </>
   );
 }
+
+
+/*opacity="0.1"
+          transition="0.8s"
+          _hover={{
+            opacity: "0.6",
+          }}*/
