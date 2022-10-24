@@ -16,6 +16,8 @@ export default function Home() {
     Aos.init({ duration: 1500 });
   }, [])
   
+  console.log('bianca')
+
   return (
     <>
       <Head>

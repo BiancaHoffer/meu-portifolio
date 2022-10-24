@@ -20,7 +20,7 @@ export function ButtonContacts() {
           variant='solid' 
           colorScheme='transparent' 
           p="4px"
-          fontSize={["14px", "18px"]}
+          fontSize={["1rem", "1.2rem"]}
           color="gray.300"
           transition="0.4s"
           _hover={{color: 'white'}}

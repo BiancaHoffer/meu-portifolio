@@ -3,6 +3,7 @@ import { Text, Heading, GridItem } from '@chakra-ui/react'
 export function AboutMeText() {
   return (
     <GridItem 
+        w="100%"
         maxWidth="640px" 
         display="flex" 
         flexDirection="column" 
@@ -21,11 +22,10 @@ export function AboutMeText() {
           fontSize={["1rem", "1.5rem", "1.6rem","2rem"]}
           width={["200px", "400px", "600px", "600px"]}
         >
-          Sou desenvolvera desde 2021, focada em web e mobile, sempre busco criar páginas modernas e 
+          Sou desenvolvera desde 2021, focada em web e mobile. Sempre busco criar páginas modernas e 
           dinâmicas.
           Dedico o máximo do meu tempo para aprender as principais tecnologias do mercado front-end 
           e aplicar em meus projetos. 
-         
         </Text>
       </GridItem>
   );

@@ -10,7 +10,7 @@ export function NavLink({ title, href }: NavLinkProps) {
   return (
     <Link href={href} passHref>
         <LinkChakra 
-            fontSize={["14px", "18px"]}
+            fontSize={["1rem", "1.2rem"]}
             fontWeight="bold" 
             p="4px" 
             color="gray.300" 

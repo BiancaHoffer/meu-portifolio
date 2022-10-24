@@ -19,7 +19,7 @@ export default function Projects() {
         justify="center"
         align="center"
       >
-          <Flex flexDir="column" w="100%" mt="80px" data-aos="fade-right">
+          <Flex flexDir="column" w="100%" mt="80px" data-aos="fade-right" >
             <Heading marginBottom="40px" fontSize={["2rem", "2.5rem", "3.5rem", "4.5rem"]}>
               Projetos
             </Heading>
