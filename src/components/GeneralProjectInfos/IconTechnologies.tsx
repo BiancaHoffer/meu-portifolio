@@ -1,4 +1,4 @@
-import { Flex, Icon, Tooltip } from "@chakra-ui/react";
+import { Flex, Icon, Tooltip, Image } from "@chakra-ui/react";
 
 interface IconTechnologiesProps {
     icon: any;
@@ -15,8 +15,8 @@ export function IconTechnologies({ icon, label }: IconTechnologiesProps) {
             alignItems="center"
             justifyContent="center"
         >
-            <Icon 
-                as={icon} 
+            <Image 
+                src={icon} 
                 w={["1.5rem", "2.5rem"]}
                 h={["1.5rem", "2.5rem"]}
                 color="pink.500"

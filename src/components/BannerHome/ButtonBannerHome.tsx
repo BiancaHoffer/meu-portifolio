@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function ButtonBannerHome() {
   return (
-    <Link href="/project" passHref>
+    <Link href="/projects" passHref>
       <LinkChakra
         _hover={{
           textDecoration: "none"

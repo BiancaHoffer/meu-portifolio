@@ -6,7 +6,26 @@ import { BannerProject } from "./BannerProject";
 import { IconRedirect } from "./IconRedirect";
 import { IconTechnologies } from "./IconTechnologies";
 
-export function GeneralProjectInfos() {
+interface ProjectProps {
+  data: {
+    uid: string;
+    name: string;
+    image: string;
+    text: string;
+    redirect: {
+      link: string;
+      icon: string;
+    }[];
+    technology: {
+      icon: {
+        url: string;
+        field: string;
+      }
+    }[];
+  }
+}
+
+export function GeneralProjectInfos({ data }: ProjectProps) {
   return (
     <>
       <BannerProject />
@@ -22,24 +41,26 @@ export function GeneralProjectInfos() {
           <VStack w="100%" justify="center" align="start">
             <Flex flexDir="column">
               <Heading
-                title="Spacetraveling" 
+                title={data.name}
                 marginBottom={["40px", "80px", "100px", "100px"]}
               />
             </Flex>
 
-            <Text text="
-              Spacetraveling é blog moderno sobre tecnologia. O projeto possui
-              uma das principais ferramentas utilizadas atualmente,
-              Next.js, um framework muito poderoso e funcional.
-              " 
-            />
+            <Text text={data.text} />
 
-            <HStack
-                paddingTop={["1rem", "1.5rem", "1.5rem", "1.5rem"]}
-                gap={["0", "4"]} 
+            <HStack 
+              paddingTop={["1rem", "1.5rem", "1.5rem", "1.5rem"]}
+              gap={["0", "4"]} 
               >
-                <IconRedirect  href="#" icon={"github"} />
-                <IconRedirect  href="#" icon={"site"} />
+                {data.redirect.map(icon => {
+                  return (
+                      <IconRedirect 
+                        key={icon.link}
+                        href={icon.link} 
+                        icon={icon.icon} 
+                      />
+                  )
+                })}
             </HStack>
           </VStack>
           
@@ -58,9 +79,15 @@ export function GeneralProjectInfos() {
             </HeadingChakra>
             
             <HStack gap={["0", "4"]}>
-              <IconTechnologies icon={"tecnologia"} label="Next.js" />
-              <IconTechnologies icon={"tecnologia"} label="Next.js" />
-              <IconTechnologies icon={"tecnologia"} label="Next.js" />
+              {data.technology.map(icon => {
+                return (
+                  <IconTechnologies 
+                    key={icon.icon.url}
+                    icon={icon.icon.url} 
+                    label={icon.icon.field}
+                  />
+                )
+              })}
             </HStack>
           </VStack>
         </Flex>
