@@ -32,6 +32,7 @@ export default function Home({ data }) {
       >  
         <Banner data={data} />
         <AboutMe />
+        a
         <MainTechnologies />
       </VStack>
     </>
