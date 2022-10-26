@@ -16,6 +16,7 @@ export function ButtonSeeMore({ slug }: ButtonSeeMoreProps) {
       h="0"
       variant="transparent"
       transition="0.4s"
+      data-aos="zoom-in"
       _hover={{
         color: "#DB2090",
       }}

@@ -14,6 +14,7 @@ export function Icon({ icon, title, ...rest }: IconProps) {
       flexDirection="column" 
       justifyContent="center" 
       alignItems="center"
+      data-aos="zoom-in"
       {...rest}
     >
       <IconChakra 

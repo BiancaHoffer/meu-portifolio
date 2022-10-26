@@ -45,6 +45,7 @@ export function BannerProjectOpacity({ data }: ProjectsProps) {
                 <Heading
                   title={project.name}
                   mb={["1rem", "2rem", "2.5rem"]}
+                  data-aos="zoom-in"
                 />
                 <ButtonSeeMore slug={project.uid}/>
               </Flex>

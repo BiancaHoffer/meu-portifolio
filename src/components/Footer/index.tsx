@@ -9,11 +9,12 @@ export function Footer() {
     <Flex
       w="100%"
       margin="0 auto"
-      paddingY={["80px", "80px", "140px", "140px"]}
+      paddingY={["80px", "80px", "140px", "4rem"]}
       px="52px"
       borderTop="1px"
       borderColor="gray.400"
       flexDirection="column"
+      bgColor="gray.700"
       alignItems="center"
     >
       <Flex mb="32px">
@@ -26,6 +27,7 @@ export function Footer() {
               colorScheme="gray.400"
               color="white.100" 
               transition="0.3s" 
+              data-aos="zoom-in"
               _hover={{ filter: 'brightness(0.8)' }} 
             >
               Volta ao topo
@@ -43,6 +45,7 @@ export function Footer() {
                 colorScheme="gray.400"
                 color="white.100" 
                 transition="0.3s" 
+                data-aos="zoom-in"
                 _hover={{ filter: 'brightness(0.8)' }}
               >
                 Projetos

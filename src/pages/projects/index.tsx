@@ -27,6 +27,7 @@ export default function Projects({ projects }) {
         flexDir="column"
         justify="center"
         align="center"
+        data-aos="fade-right"
       >
          <HeadingProject />
          <BannerProjectOpacity data={projects} />

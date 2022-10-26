@@ -30,6 +30,7 @@ export function Header() {
         w="100%"
         borderBottom="1px"
         borderColor="gray.400"
+        bgColor="gray.700"
       >
         <Flex 
           h="100px"
@@ -61,6 +62,7 @@ export function Header() {
       margin="0 auto"
       borderBottom="1px"
       borderBottomColor="gray.400"
+      bgColor="gray.700"
     >
       <Grid
         as='header'

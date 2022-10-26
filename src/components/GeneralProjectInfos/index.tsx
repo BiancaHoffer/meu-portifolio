@@ -1,4 +1,4 @@
-import { Flex, HStack, VStack, Heading as HeadingChakra } from "@chakra-ui/react";
+import { Flex, HStack, VStack, Heading as HeadingChakra, Grid } from "@chakra-ui/react";
 
 import { Heading } from "../Heading";
 import { Text } from "../Text";
@@ -78,7 +78,10 @@ export function GeneralProjectInfos({ data }: ProjectProps) {
               Tecnologias utilizadas: 
             </HeadingChakra>
             
-            <HStack gap={["0", "4"]}>
+            <Grid 
+              templateColumns={["repeat(4, 1fr)", "repeat(7, 1fr)"]} 
+              gap={["0", "4"]}
+            >
               {data.technology.map(icon => {
                 return (
                   <IconTechnologies 
@@ -88,7 +91,7 @@ export function GeneralProjectInfos({ data }: ProjectProps) {
                   />
                 )
               })}
-            </HStack>
+            </Grid>
           </VStack>
         </Flex>
 

@@ -18,6 +18,7 @@ export function ButtonBannerHome() {
             bgColor="gray.800"
             borderRadius="4px"
             transition="0.3s"
+            data-aos="zoom-in"
             _hover={{
                 filter: 'brightness(0.8)',
             }}

@@ -8,6 +8,7 @@ export function HeadingProject() {
       flexDir="column" 
       w="100%" 
       mt={["40px", "80px", "100px", "100px"]} 
+      
     >
       <Heading 
         title="Projetos" 

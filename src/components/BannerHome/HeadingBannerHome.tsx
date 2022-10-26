@@ -20,6 +20,7 @@ export function HeadingBannerHome({ result }: ResultProps) {
       align="center"
       paddingX="52px"
       paddingY="440px" 
+      data-aos="fade-down"
       sx={{
         '@media (max-width: 1600px)': { 
           paddingY: '320px',

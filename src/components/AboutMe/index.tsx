@@ -18,6 +18,7 @@ export function AboutMe() {
           alignItems="center" 
           templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)"]}
           gap={8}
+          data-aos="fade-up"
         >
           <AboutMeText />
           <Memoji />

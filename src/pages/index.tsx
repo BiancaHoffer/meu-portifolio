@@ -15,10 +15,6 @@ import { MainTechnologies } from '../components/MainTechnologies';
 import { AboutMe } from '../components/AboutMe';
 
 export default function Home({ data }) {
-  useEffect(() => { 
-    Aos.init({ duration: 1500 });
-  }, [])
-
   return (
     <>
       <Head>

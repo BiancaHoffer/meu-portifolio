@@ -11,6 +11,7 @@ export function MainTechnologies() {
       margin="0 auto"
       paddingY={["80px", "140px", "200px", "200px"]}
       px="52px"
+      data-aos="fade-up"
     >
       <Flex
         w="100%"
