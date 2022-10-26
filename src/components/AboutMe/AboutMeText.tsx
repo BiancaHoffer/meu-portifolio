@@ -1,4 +1,6 @@
-import { Text, Heading, GridItem } from '@chakra-ui/react'
+import { GridItem } from '@chakra-ui/react'
+import { Heading } from '../Heading';
+import { Text } from '../Text';
 
 export function AboutMeText() {
   return (
@@ -10,23 +12,20 @@ export function AboutMeText() {
         data-aos="fade-down"
       >
         <Heading 
-          fontSize={["2rem", "2.5rem", "3.5rem", "4.5rem"]}
-          marginBottom={["40px", "80px", "100px", "100px"]}
+          title='Sobre mim' 
           textAlign={["center", "center", "start", "start"]}
-        >
-          Sobre mim
-        </Heading>
+          marginBottom={["40px", "80px", "100px", "100px"]}
+        />
 
-        <Text 
-          textAlign="justify" 
-          fontSize={["1rem", "1.5rem", "1.6rem","2rem"]}
-          width={["200px", "400px", "600px", "600px"]}
-        >
+        <Text text='
           Sou desenvolvera desde 2021, focada em web e mobile. Sempre busco criar páginas modernas e 
           dinâmicas.
           Dedico o máximo do meu tempo para aprender as principais tecnologias do mercado front-end 
-          e aplicar em meus projetos. 
-        </Text>
+          e aplicar em meus projetos.
+          '  
+          w={["100%", "100%", "600px", "600px"]}
+        />
+        
       </GridItem>
   );
 }

@@ -8,14 +8,14 @@ interface IconRedirectProps {
 
 export function IconRedirect({ icon, href }: IconRedirectProps) {
   return (
-    <Link href={href} passHref>
-        <LinkChakra isExternal variant='with-shadow'>
+    <Link href={href} passHref >
+        <LinkChakra isExternal variant='with-shadow' data-aos="zoom-in">
             <Icon 
                 as={icon} 
-                w="30px" 
-                h="30px" 
+                w={["1.5rem", "2.5rem"]}
+                h={["1.5rem", "2.5rem"]}
                 color="white"
-                paddingRight="0.5rem"
+                data-aos="zoom-in"
             />
         </LinkChakra>
     </Link>

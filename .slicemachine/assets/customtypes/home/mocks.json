@@ -1,0 +1,23 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "home",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": "red",
+    "subtitle": [
+      {
+        "type": "paragraph",
+        "text": "Laboris adipisicing aliquip consequat consectetur voluptate elit magna adipisicing consectetur ad anim sit enim sint cillum. Non minim ex et ea.",
+        "spans": []
+      }
+    ]
+  }
+}

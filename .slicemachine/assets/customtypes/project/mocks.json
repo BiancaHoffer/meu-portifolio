@@ -1,0 +1,69 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "project",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "name": "diameter",
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    },
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "Lorem culpa dolore ea mollit.",
+        "spans": []
+      }
+    ],
+    "redirect": [
+      {
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+        }
+      }
+    ],
+    "technology": [
+      {
+        "icon": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
+        },
+        "field": [
+          {
+            "type": "paragraph",
+            "text": "Aliquip deserunt sunt laborum magna id magna ad.",
+            "spans": []
+          }
+        ]
+      }
+    ]
+  }
+}

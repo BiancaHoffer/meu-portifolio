@@ -2,7 +2,17 @@ import { Flex } from '@chakra-ui/react';
 import styles from './banner.module.scss';
 import { Heading } from './Heading';
 
-export function Banner() {
+interface BannerProps {
+  data: {
+    video: string;
+    result: {
+      title: string;
+      subtitle: string; 
+    };
+  };
+}
+
+export function Banner({ data }: BannerProps) {
   return (
     <Flex
       w="100%"
@@ -19,10 +29,10 @@ export function Banner() {
         playsInline
         className={styles.container}
       >
-        <source src="/videos/galaxy.mp4" />
+        <source src={data.video} />
       </video>
 
-      <Heading />
+      <Heading result={data.result[0]} />
     </Flex>
   );
 }

@@ -1,7 +1,14 @@
 import { Flex, Heading as H1, Text } from '@chakra-ui/react'
 import { ButtonBanner } from './ButtonBanner';
 
-export function Heading() {
+interface ResultProps {
+  result: {
+    title: string;
+    subtitle: string; 
+  }
+}
+
+export function Heading({ result }: ResultProps) {
   return (
     <Flex 
       position="relative"
@@ -35,14 +42,14 @@ export function Heading() {
       textAlign="center"
       marginBottom={["4px", "6px"]}
     >
-      Olá, meu nome é Bianca 👋
+      {result.title}
     </Text>
     <H1
       fontSize={["34px", "42px", "60px", "72px"]} 
       fontWeight="500"
       textAlign="center"
     >
-      Sou desenvolvedora front-end
+      {result.subtitle}
     </H1>
 
     <ButtonBanner />

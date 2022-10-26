@@ -1,6 +1,7 @@
-import { Heading, Flex, Grid, VStack  } from '@chakra-ui/react'
+import { Flex, Grid, VStack  } from '@chakra-ui/react'
 import { Icon } from './icon';
 import { SiTypescript, SiReact, SiCss3, SiHtml5 } from 'react-icons/si'
+import { Heading } from '../Heading';
 
 export function MainTechnologies() {
   return (
@@ -16,13 +17,11 @@ export function MainTechnologies() {
         w="100%"
         flexDirection="column" 
       >
-        <Heading
-          fontSize={["2rem", "2.5rem", "3.5rem", "4.5rem"]}
-          marginBottom={["40px", "80px", "100px", "100px"]}
+        <Heading 
+          title="Principais Tecnologias"
           textAlign={["center", "center", "start", "start"]}
-        >
-          Principais Tecnologias
-        </Heading>
+          marginBottom={["40px", "80px", "100px", "100px"]}
+        /> 
       
         <Grid 
           templateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)"]} 

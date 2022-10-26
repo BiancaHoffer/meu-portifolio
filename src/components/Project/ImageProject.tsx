@@ -1,9 +1,13 @@
 import { Image } from "@chakra-ui/react";
 
-export function ImageProject() {
+interface ImageProjectProps {
+  src: string;
+}
+
+export function ImageProject({ src }: ImageProjectProps) {
   return (
     <Image 
-        src="/images/spacetraveling.png"  
+        src={src} 
         alt="imagem projeto" 
         borderRadius="4px" 
         opacity="0.2"

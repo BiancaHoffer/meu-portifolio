@@ -1,18 +1,31 @@
-import { Button, Icon } from "@chakra-ui/react";
+import { Button, Icon, Link as LinkChakra } from "@chakra-ui/react";
+import Link from "next/link";
 import { BsArrowRightCircle } from 'react-icons/bs';
 
-export function ButtonSeeMore() {
+interface ButtonSeeMoreProps {
+  slug: string;
+}
+
+export function ButtonSeeMore({ slug }: ButtonSeeMoreProps) {
   return (
     <Button
+      w="100%" 
+      justifyContent="start"
       fontSize={["0.8rem", "1.5rem", "1.6rem", "2rem"]}
-      p="0"
+      px="1"
       h="0"
+      variant="transparent"
       transition="0.4s"
       _hover={{
         color: "#DB2090",
       }}
     >
-      Saiba mais
+      <Link href={`/projects/${slug}`} passHref>
+        <LinkChakra _hover={{ textDecoration: "none" }}>
+          Saiba mais
+        </LinkChakra>
+      </Link>
+
       <Icon
         as={BsArrowRightCircle}
         w={["0.5rem", "1.5rem", "1.6rem"]}

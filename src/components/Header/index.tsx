@@ -41,10 +41,11 @@ export function Header() {
         >
           <IconButton
             aria-label='Open navigation'
-            w="40px"
-            h="40px"
-            bgColor="gray.400"
-            icon={<Icon as={RiMenuLine} w="20px" h="20px" color="white.100"/>}
+            w="1.5rem"
+            h="1.5rem"
+            colorScheme="gray.400"
+            _focus={{ background:"transparent" }}
+            icon={<Icon as={RiMenuLine} w="1.2rem" h="1.2rem" color="white.100" />}
             onClick={onOpen}
           />
           <Drawer />

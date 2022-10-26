@@ -18,7 +18,7 @@ export function Drawer() {
   return (
     <DrawerChakra isOpen={isOpen} onClose={onClose} placement='right'>
       <DrawerOverlay />
-      <DrawerContent bg="gray.800" p="4">
+      <DrawerContent bgColor="gray.800" p="4">
         <DrawerCloseButton />
         <DrawerHeader>Navegação</DrawerHeader>
         <DrawerBody display="flex" flexDirection="column" alignItems="flex-start">

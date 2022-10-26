@@ -1,12 +1,21 @@
-import { Heading } from '@chakra-ui/react';
+import {  Flex } from '@chakra-ui/react';
+import { Heading } from '../Heading';
+import { Text } from '../Text';
 
 export function HeadingProject() {
   return (
-    <Heading
-      fontSize={["1.5rem", "2.5rem", "3.5rem", "4.5rem"]}
-      mb={["1rem", "2rem", "2.5rem"]}
+    <Flex 
+      flexDir="column" 
+      w="100%" 
+      mt={["40px", "80px", "100px", "100px"]} 
+      data-aos="fade-right" 
     >
-      Ig.newss
-    </Heading>
+      <Heading 
+        title="Projetos" 
+        marginBottom={["1rem", "2.5rem", "3rem", "3rem"]}
+      />
+      
+      <Text text='Principais projetos até o momento' />
+    </Flex>
   );
 }
