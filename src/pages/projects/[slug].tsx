@@ -85,7 +85,6 @@ export default function ProjectSlug() {
             </HStack>
           </VStack>
         </Flex>
-
     </>
   );
 }

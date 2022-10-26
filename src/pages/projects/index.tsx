@@ -35,6 +35,7 @@ export default function Projects({ projects }: ProjectsData ) {
         flexDir="column"
         justify="center"
         align="center"
+        data-aos="fade-right" 
       >
          <HeadingProject />
          <Project data={projects} />
