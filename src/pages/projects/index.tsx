@@ -38,7 +38,6 @@ export default function Projects({ projects }: ProjectsData ) {
       >
          <HeadingProject />
          <Project data={projects} />
-         a
       </Flex>
     </>
   );
