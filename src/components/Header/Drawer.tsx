@@ -10,7 +10,8 @@ import {
 import { NavLink } from './NavLink';
 
 import { useSidebarDrawer } from '../../context/SidebarDrowerContent';
-import { ButtonContacts } from '../ButtonContacts';
+import { ButtonHeaderContacts } from '../ButtonHeaderContacts';
+
 
 export function Drawer() {
   const { isOpen, onClose } = useSidebarDrawer();
@@ -24,7 +25,7 @@ export function Drawer() {
         <DrawerBody display="flex" flexDirection="column" alignItems="flex-start">
           <NavLink title='Início' href="/"/>
           <NavLink title='Projetos' href="/projects"/>
-          <ButtonContacts />
+          <ButtonHeaderContacts />
         </DrawerBody>
       </DrawerContent>
     </DrawerChakra>

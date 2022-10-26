@@ -9,7 +9,6 @@ export function AboutMeText() {
         maxWidth="640px" 
         display="flex" 
         flexDirection="column" 
-        data-aos="fade-down"
       >
         <Heading 
           title='Sobre mim' 

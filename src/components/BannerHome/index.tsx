@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react';
 import styles from './banner.module.scss';
-import { Heading } from './Heading';
+import { HeadingBannerHome } from './HeadingBannerHome';
 
 interface BannerProps {
   data: {
@@ -12,7 +12,7 @@ interface BannerProps {
   };
 }
 
-export function Banner({ data }: BannerProps) {
+export function BannerHome({ data }: BannerProps) {
   return (
     <Flex
       w="100%"
@@ -32,7 +32,7 @@ export function Banner({ data }: BannerProps) {
         <source src={data.video} />
       </video>
 
-      <Heading result={data.result[0]} />
+      <HeadingBannerHome result={data.result[0]} />
     </Flex>
   );
 }

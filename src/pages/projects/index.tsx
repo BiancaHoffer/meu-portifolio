@@ -1,25 +1,17 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-import { Heading, Flex, Box } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
-import { Project } from "../../components/Project";
-import { HeadingProject } from "../../components/Project/HeadingProject";
 import { getPrismicClient } from "../../services/prismic";
+import { asImageSrc } from "@prismicio/helpers";
+import { HeadingProject } from "../../components/BannerProjectOpacity/HeadingProject";
+import { BannerProjectOpacity } from "../../components/BannerProjectOpacity";
 
-import { asImageSrc } from "@prismicio/helpers"
 
-interface ProjectsData {
-  projects: {
-    uid: string;
-    name: string;
-    image: {
-      url: string;
-    };
-  }
-}
 
-export default function Projects({ projects }: ProjectsData ) {  
+
+export default function Projects({ projects }) {  
   return (
     <>
       <Head>
@@ -35,10 +27,9 @@ export default function Projects({ projects }: ProjectsData ) {
         flexDir="column"
         justify="center"
         align="center"
-        data-aos="fade-right" 
       >
          <HeadingProject />
-         <Project data={projects} />
+         <BannerProjectOpacity data={projects} />
       </Flex>
     </>
   );

@@ -14,7 +14,6 @@ export function IconTechnologies({ icon, label }: IconTechnologiesProps) {
             borderRadius="50%" 
             alignItems="center"
             justifyContent="center"
-            data-aos="zoom-in"
         >
             <Icon 
                 as={icon} 

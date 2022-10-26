@@ -14,7 +14,6 @@ export function Icon({ icon, title, ...rest }: IconProps) {
       flexDirection="column" 
       justifyContent="center" 
       alignItems="center"
-      data-aos="zoom-in"
       {...rest}
     >
       <IconChakra 
@@ -31,14 +30,3 @@ export function Icon({ icon, title, ...rest }: IconProps) {
   </>
   );
 }
-
-/*
-  <Image 
-        src={src} 
-        w="80px"
-        h="80px" 
-        marginBottom="24px"
-        alt={`Icon ${title}`}
-        data-aos="zoom-in"
-      />
-*/ 

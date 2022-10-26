@@ -12,7 +12,6 @@ export function AboutMe() {
         px="52px"
         borderBottom="1px"
         borderColor="gray.400"
-        data-aos="fade-down"
       >
          
         <Grid 

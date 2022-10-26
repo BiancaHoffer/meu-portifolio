@@ -1,11 +1,10 @@
 import { Button, Link as LinkChakra } from '@chakra-ui/react';
 import Link from 'next/link';
 
-export function ButtonBanner() {
+export function ButtonBannerHome() {
   return (
-    <Link href="/projects" passHref>
+    <Link href="/project" passHref>
       <LinkChakra
-        data-aos="zoom-in"
         _hover={{
           textDecoration: "none"
         }}

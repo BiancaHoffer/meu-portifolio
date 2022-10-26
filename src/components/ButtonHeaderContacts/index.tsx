@@ -12,7 +12,7 @@ import { AiFillCaretDown, AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp } from
 
 import { LinkContact } from './LinkContact';
 
-export function ButtonContacts() {
+export function ButtonHeaderContacts() {
   return (
     <Popover>
       <PopoverTrigger>

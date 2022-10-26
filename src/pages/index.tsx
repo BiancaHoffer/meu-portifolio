@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import Head from 'next/head';
 import { GetStaticProps } from "next"
@@ -10,10 +10,9 @@ import 'aos/dist/aos.css'
 
 import { getPrismicClient } from '../services/prismic';
 import { asText } from "@prismicio/helpers"
-
-import { Banner } from '../components/Banner';
-import { AboutMe } from '../components/AboutMe';
+import { BannerHome } from '../components/BannerHome';
 import { MainTechnologies } from '../components/MainTechnologies';
+import { AboutMe } from '../components/AboutMe';
 
 export default function Home({ data }) {
   useEffect(() => { 
@@ -32,10 +31,9 @@ export default function Home({ data }) {
         as='main'
         w="100%" 
       >  
-        <Banner data={data} />
+        <BannerHome data={data} />
         <AboutMe />
         <MainTechnologies />
-        a
       </VStack>
     </>
   )

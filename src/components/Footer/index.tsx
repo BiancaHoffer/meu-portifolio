@@ -18,7 +18,7 @@ export function Footer() {
     >
       <Flex mb="32px">
         <Link href={asPath}>
-          <LinkChakra data-aos="zoom-in" _hover={{ textDecoration: "none" }}>
+          <LinkChakra _hover={{ textDecoration: "none" }}>
             <Button
               w="120px" 
               mx="8px"
@@ -35,7 +35,7 @@ export function Footer() {
         
         {asPath === "/" ? (
           <Link href="/projects"  passHref>
-            <LinkChakra data-aos="zoom-in" _hover={{ textDecoration: "none" }}>
+            <LinkChakra _hover={{ textDecoration: "none" }}>
               <Button 
                 w="120px"
                 mx="8px" 
@@ -57,7 +57,6 @@ export function Footer() {
         textAlign="center" 
         textDecor="underline"
         fontSize={["16px", "16px", "18px", "18px"]} 
-        data-aos="fade-up"
       >
         bianca.mhm1@gmail.com
       </Text>
@@ -65,7 +64,6 @@ export function Footer() {
         py="8px" 
         textAlign="center" 
         fontSize={["16px", "16px", "18px", "18px"]}
-        data-aos="fade-up"
       >
         Todos os direitos reservados - Bianca Macedo Hoffer Madruga
       </Text>

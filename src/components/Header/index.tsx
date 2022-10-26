@@ -9,7 +9,8 @@ import {
 import { RiMenuLine } from 'react-icons/ri';
 
 import { useSidebarDrawer } from '../../context/SidebarDrowerContent';
-import { ButtonContacts } from '../ButtonContacts';
+import { ButtonHeaderContacts } from '../ButtonHeaderContacts';
+
 
 import { Drawer } from './Drawer';
 import { NavLink } from './NavLink';
@@ -76,7 +77,7 @@ export function Header() {
         <Flex justify='space-between' align="center">
           <NavLink title='Início' href="/"/>
           <NavLink title='Projetos' href="/projects"/>
-          <ButtonContacts />
+          <ButtonHeaderContacts />
         </Flex>
       </Grid>
     </Flex>

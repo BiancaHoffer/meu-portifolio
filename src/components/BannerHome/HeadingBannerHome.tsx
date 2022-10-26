@@ -1,5 +1,5 @@
 import { Flex, Heading as H1, Text } from '@chakra-ui/react'
-import { ButtonBanner } from './ButtonBanner';
+import { ButtonBannerHome } from './ButtonBannerHome';
 
 interface ResultProps {
   result: {
@@ -8,7 +8,7 @@ interface ResultProps {
   }
 }
 
-export function Heading({ result }: ResultProps) {
+export function HeadingBannerHome({ result }: ResultProps) {
   return (
     <Flex 
       position="relative"
@@ -20,7 +20,6 @@ export function Heading({ result }: ResultProps) {
       align="center"
       paddingX="52px"
       paddingY="440px" 
-      data-aos="fade-up"
       sx={{
         '@media (max-width: 1600px)': { 
           paddingY: '320px',
@@ -52,7 +51,7 @@ export function Heading({ result }: ResultProps) {
       {result.subtitle}
     </H1>
 
-    <ButtonBanner />
+    <ButtonBannerHome />
   </Flex>
   );
 }
