@@ -7,7 +7,7 @@ export function HeadingProject() {
     <Flex 
       flexDir="column" 
       w="100%" 
-      mt={["40px", "80px", "100px", "100px"]} 
+      my={["40px", "80px", "100px", "300px"]} 
       data-aos="fade-right" 
     >
       <Heading 
