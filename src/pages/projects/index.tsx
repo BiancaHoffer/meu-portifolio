@@ -7,11 +7,17 @@ import { getPrismicClient } from "../../services/prismic";
 import { asImageSrc } from "@prismicio/helpers";
 import { HeadingProject } from "../../components/BannerProjectOpacity/HeadingProject";
 import { BannerProjectOpacity } from "../../components/BannerProjectOpacity";
+import { useEffect } from "react";
+import Aos from "aos";
 
 
 
 
 export default function Projects({ projects }) {  
+  useEffect(() => { 
+    Aos.init({ duration: 1000 });
+  }, [])
+  
   return (
     <>
       <Head>
