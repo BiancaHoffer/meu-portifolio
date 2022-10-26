@@ -23,6 +23,8 @@ export default function Home({ data }) {
   return (
     <>
       <Head>
+        <meta name="robots" content="index, nofollow" />
+        <meta name="description" content="Portfólio de Bianca Macedo Hoffer Madruga" />
         <title>Home | Bianca Hoffer</title>
       </Head>
 
