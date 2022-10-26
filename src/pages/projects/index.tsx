@@ -43,7 +43,7 @@ export default function Projects({ projects }: ProjectsData ) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+/*export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient({});
 
   const response = await prismic.getByType('project', {
@@ -67,4 +67,4 @@ export const getStaticProps: GetStaticProps = async () => {
     },
     revalidate: 60 * 60 * 30
   }
-}
+}*/
