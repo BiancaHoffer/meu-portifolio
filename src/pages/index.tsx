@@ -1,12 +1,7 @@
-import { useEffect } from 'react';
-
 import Head from 'next/head';
 import { GetStaticProps } from "next"
 
 import { VStack } from '@chakra-ui/react'
-
-import Aos from 'aos';
-import 'aos/dist/aos.css'
 
 import { getPrismicClient } from '../services/prismic';
 import { asText } from "@prismicio/helpers"
