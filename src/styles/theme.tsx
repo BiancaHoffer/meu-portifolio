@@ -6,7 +6,7 @@ export const theme = extendTheme({
             "100": "#F8F8F8"
         },
         pink: {
-           "500": "rgb(219, 32, 144)"
+           "500": "#db2090"
         },
         gray: {
             "300": "#585656",

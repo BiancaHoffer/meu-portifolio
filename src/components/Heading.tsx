@@ -8,7 +8,7 @@ interface HeadingProps extends ChakraProps {
 export function Heading({ title, ...spreed }: HeadingProps) {
   return (
     <HeadingChakra
-        fontSize={["2rem", "2.5rem", "3.5rem", "4.5rem"]}
+        fontSize={["1.5rem", "2.5rem", "3.5rem", "4.5rem"]}
         {...spreed}
     >
         { title }

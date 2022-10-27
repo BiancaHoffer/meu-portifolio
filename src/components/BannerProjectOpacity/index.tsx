@@ -32,7 +32,7 @@ export function BannerProjectOpacity({ data }: ProjectsProps) {
               w="100%" 
               position="relative" 
               borderRadius="4px" 
-              borderBottom="1px" 
+              borderTop="1px" 
               borderColor="gray.400"
               paddingY={["60px", "100px", "140px", "140px"]}
             >

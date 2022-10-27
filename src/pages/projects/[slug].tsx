@@ -2,14 +2,13 @@ import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { GeneralProjectInfos } from "../../components/GeneralProjectInfos";
 import { getPrismicClient } from "../../services/prismic";
-import { asImageSrc, asHTML, asText } from "@prismicio/helpers";
-
+import { asImageSrc, asText } from "@prismicio/helpers";
 
 export default function ProjectSlug({ project }) {
   return (
     <>
       <Head>
-        <title>{`Projetos | `}</title>
+        <title>{`Projetos | ${project.name}`}</title>
       </Head>
         <GeneralProjectInfos data={project} />
     </>
@@ -22,7 +21,6 @@ export const getStaticPaths: GetStaticPaths = () => {
     fallback: 'blocking'
   }
 }
-
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const prismic = getPrismicClient({});

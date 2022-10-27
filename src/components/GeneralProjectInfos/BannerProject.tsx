@@ -1,6 +1,10 @@
-import { Flex, useBreakpointValue } from '@chakra-ui/react';
+import { Flex, Image, useBreakpointValue } from '@chakra-ui/react';
 
-export function BannerProject() {
+interface BannerProjectProps {
+  src: string;
+}
+
+export function BannerProject({ src }: BannerProjectProps) {
   const isMediumAndSmallVersion = useBreakpointValue({
     base: true,
     lg: false,
@@ -10,15 +14,16 @@ export function BannerProject() {
     <>
       {!isMediumAndSmallVersion && (
         <Flex
-          bgImage="/images/spacetraveling.png"
-          bgRepeat="no-repeat"
           bgColor="gray.400"
-          bgPos="center top"
-          objectFit="cover"
           w="100%"
           h="600px"
           opacity="0.6"
-        />
+          justify="center"
+          transition="0.4s"
+          _hover={{ opacity: "0.9" }}
+        >
+          <Image src={src} alt="imagem projeto" objectFit="cover" width="auto" />
+        </Flex>
       )}
     </>
   );

@@ -1,4 +1,4 @@
-import { Image } from "@chakra-ui/react";
+import { Image, Flex } from "@chakra-ui/react";
 
 interface ImageProjectProps {
   src: string;

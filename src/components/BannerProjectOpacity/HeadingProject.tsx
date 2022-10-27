@@ -7,7 +7,7 @@ export function HeadingProject() {
     <Flex 
       flexDir="column" 
       w="100%" 
-      mt={["40px", "80px", "100px", "100px"]} 
+      my={["60px", "100px", "140px", "140px"]} 
       
     >
       <Heading 

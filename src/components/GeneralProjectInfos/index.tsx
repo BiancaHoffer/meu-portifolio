@@ -28,7 +28,7 @@ interface ProjectProps {
 export function GeneralProjectInfos({ data }: ProjectProps) {
   return (
     <>
-      <BannerProject />
+      <BannerProject src={data.image} />
 
       <Flex
           w="100%"
@@ -79,7 +79,7 @@ export function GeneralProjectInfos({ data }: ProjectProps) {
             </HeadingChakra>
             
             <Grid 
-              templateColumns={["repeat(4, 1fr)", "repeat(7, 1fr)"]} 
+              templateColumns={["repeat(4, 1fr)", "repeat(7, 1fr)", "repeat(10, 1fr)"]} 
               gap={["0", "4"]}
             >
               {data.technology.map(icon => {

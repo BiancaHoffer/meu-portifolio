@@ -14,10 +14,6 @@ import Aos from "aos";
 
 
 export default function Projects({ projects }) {  
-  useEffect(() => { 
-    Aos.init({ duration: 1000 });
-  }, [])
-  
   return (
     <>
       <Head>
