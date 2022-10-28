@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Flex, Text, Button, Link as LinkChakra } from "@chakra-ui/react";
+import { Flex, Text, Button, Link as LinkChakra, useColorModeValue } from "@chakra-ui/react";
 
 export function Footer() {
   const { pathname, asPath } = useRouter();
@@ -12,9 +12,9 @@ export function Footer() {
       paddingY={["80px", "80px", "140px", "4rem"]}
       px="52px"
       borderTop="1px"
-      borderColor="gray.400"
+      borderColor={useColorModeValue("gray.400", "gray.100")}
       flexDirection="column"
-      bgColor="gray.700"
+      bgColor={useColorModeValue("gray.700", "white.100")}
       alignItems="center"
     >
       <Flex mb="32px">
@@ -23,12 +23,13 @@ export function Footer() {
             <Button
               w="120px" 
               mx="8px"
-              bgColor="gray.400" 
+              bgColor={useColorModeValue("gray.400", "pink.500")}
+              color={useColorModeValue("white.100", "white.100")}
               colorScheme="gray.400"
-              color="white.100" 
+              boxShadow={useColorModeValue('none', 'xl')}
               transition="0.3s" 
+              _hover={{ filter: 'brightness(0.9)' }} 
               data-aos="zoom-in"
-              _hover={{ filter: 'brightness(0.8)' }} 
             >
               Volta ao topo
             </Button>
@@ -41,12 +42,13 @@ export function Footer() {
               <Button 
                 w="120px"
                 mx="8px" 
-                bgColor="gray.400" 
+                bgColor={useColorModeValue("gray.400", "pink.500")}
+                color={useColorModeValue("white.100", "white.100")}
                 colorScheme="gray.400"
-                color="white.100" 
-                transition="0.3s" 
+                transition="0.2s" 
+                boxShadow={useColorModeValue('none', 'xl')}  
+                _hover={{ filter: 'brightness(0.9)'}}
                 data-aos="zoom-in"
-                _hover={{ filter: 'brightness(0.8)' }}
               >
                 Projetos
               </Button>
@@ -60,6 +62,7 @@ export function Footer() {
         textAlign="center" 
         textDecor="underline"
         fontSize={["16px", "16px", "18px", "18px"]} 
+        color={useColorModeValue("white.100", "gray.300")}
       >
         bianca.mhm1@gmail.com
       </Text>
@@ -67,6 +70,7 @@ export function Footer() {
         py="8px" 
         textAlign="center" 
         fontSize={["16px", "16px", "18px", "18px"]}
+        color={useColorModeValue("white.100", "gray.300")}
       >
         Todos os direitos reservados - Bianca Macedo Hoffer Madruga
       </Text>

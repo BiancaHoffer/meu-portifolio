@@ -5,6 +5,7 @@ import {
   PopoverTrigger,
   PopoverContent,
   PopoverBody,
+  useColorModeValue,
 
 } from '@chakra-ui/react';
 
@@ -21,9 +22,9 @@ export function ButtonHeaderContacts() {
           colorScheme='transparent' 
           p="4px"
           fontSize={["1rem", "1.2rem"]}
-          color="gray.300"
+          color={useColorModeValue("gray.300", "gray.200")}
           transition="0.4s"
-          _hover={{color: 'white'}}
+          _hover={{ color:useColorModeValue('white.100', "gray.100") }}
         >
           Contato
           <Icon 
@@ -34,7 +35,7 @@ export function ButtonHeaderContacts() {
         </Button>
       </PopoverTrigger>
       
-      <PopoverContent width="200px" bgColor="gray.400" border="none">
+      <PopoverContent boxShadow='xl' width="200px" bgColor={useColorModeValue("gray.400", "gray.300")} border="none">
         <PopoverBody display="flex" flexDir="column">
           <LinkContact 
             name='GitHub' 

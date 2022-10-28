@@ -1,4 +1,4 @@
-import { Link as LinkChakra } from '@chakra-ui/react';
+import { Link as LinkChakra, useColorModeValue } from '@chakra-ui/react';
 import Link from 'next/link';
 
 interface NavLinkProps {
@@ -13,9 +13,9 @@ export function NavLink({ title, href }: NavLinkProps) {
             fontSize={["1rem", "1.2rem"]}
             fontWeight="bold" 
             p="4px" 
-            color="gray.300" 
+            color={useColorModeValue("gray.300", "gray.200")}
             transition="0.4s"
-            _hover={{textDecoration: 'none', color:'white.100'}}
+            _hover={{textDecoration: 'none', color:useColorModeValue('white.100', "gray.100")}}
         >
             {title}
         </LinkChakra>

@@ -14,9 +14,11 @@ export function IconTechnologies({ icon, label }: IconTechnologiesProps) {
             borderRadius="50%" 
             alignItems="center"
             justifyContent="center"
+            data-aos="zoom-in"
         >
             <Image 
                 src={icon} 
+                alt={`imagem logo ${label}`}
                 w={["1.5rem", "2.5rem"]}
                 h={["1.5rem", "2.5rem"]}
                 color="pink.500"

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-import { Flex } from "@chakra-ui/react";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 import { getPrismicClient } from "../../services/prismic";
 import { asImageSrc } from "@prismicio/helpers";
@@ -20,19 +20,21 @@ export default function Projects({ projects }) {
         <title>Projetos | Bianca Hoffer</title>
       </Head>
 
-      <Flex
-        as="main"
-        w="100%"
-        maxW="1140px"
-        px="52px"
-        margin="0 auto"
-        flexDir="column"
-        justify="center"
-        align="center"
-        data-aos="fade-right"
-      >
-         <HeadingProject />
-         <BannerProjectOpacity data={projects} />
+      <Flex w="100%" bgColor={useColorModeValue("gray.800", "white.100")}>
+        <Flex
+          as="main"
+          maxW="1140px"
+          px="52px"
+          margin="0 auto"
+          flexDir="column"
+          justify="center"
+          align="center"
+          bgColor={useColorModeValue("gray.800", "white.100")}
+          //data-aos="fade-right"
+        >
+           <HeadingProject />
+           <BannerProjectOpacity data={projects} />
+        </Flex>
       </Flex>
     </>
   );

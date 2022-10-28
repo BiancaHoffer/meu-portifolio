@@ -1,4 +1,4 @@
-import { Text, Heading, Flex, Grid, VStack} from '@chakra-ui/react'
+import { Text, Heading, Flex, Grid, VStack, useColorModeValue} from '@chakra-ui/react'
 import { AboutMeText } from './AboutMeText';
 import { Memoji } from './Memoji';
 
@@ -11,7 +11,8 @@ export function AboutMe() {
         paddingY={["80px", "140px", "200px", "200px"]}
         px="52px"
         borderBottom="1px"
-        borderColor="gray.400"
+        borderColor={useColorModeValue("gray.400", "gray.100")}
+        bgColor={useColorModeValue("gray.800", "white.100")}
       >
          
         <Grid 

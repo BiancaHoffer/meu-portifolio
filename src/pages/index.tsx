@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { GetStaticProps } from "next"
 
-import { VStack } from '@chakra-ui/react'
+import { useColorModeValue, VStack } from '@chakra-ui/react'
 
 import { getPrismicClient } from '../services/prismic';
 import { asText } from "@prismicio/helpers"
@@ -21,6 +21,7 @@ export default function Home({ data }) {
       <VStack 
         as='main'
         w="100%" 
+        bgColor={useColorModeValue("gray.800", "white.100")}
       >  
         <BannerHome data={data} />
         <AboutMe />

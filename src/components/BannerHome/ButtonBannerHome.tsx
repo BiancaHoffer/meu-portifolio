@@ -1,4 +1,4 @@
-import { Button, Link as LinkChakra } from '@chakra-ui/react';
+import { Button, Link as LinkChakra, useColorModeValue } from '@chakra-ui/react';
 import Link from 'next/link';
 
 export function ButtonBannerHome() {
@@ -15,12 +15,14 @@ export function ButtonBannerHome() {
             w={["134px", "188px", "272px", "272px"]}
             p={["20px", "28px", "32px", "32px"]}
             colorScheme="gray.800"
-            bgColor="gray.800"
+            bgColor={useColorModeValue("gray.700", "white.100")}
+            color={useColorModeValue("white.100", "gray.300")}
             borderRadius="4px"
-            transition="0.3s"
-            data-aos="zoom-in"
+            boxShadow='xl'
+            transition="0.4s"
             _hover={{
                 filter: 'brightness(0.8)',
+                transition: "0.4s"
             }}
         >
             Projetos

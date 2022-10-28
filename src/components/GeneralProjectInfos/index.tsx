@@ -1,4 +1,4 @@
-import { Flex, HStack, VStack, Heading as HeadingChakra, Grid } from "@chakra-ui/react";
+import { Flex, HStack, VStack, Heading as HeadingChakra, Grid, useColorModeValue } from "@chakra-ui/react";
 
 import { Heading } from "../Heading";
 import { Text } from "../Text";
@@ -29,7 +29,6 @@ export function GeneralProjectInfos({ data }: ProjectProps) {
   return (
     <>
       <BannerProject src={data.image} />
-
       <Flex
           w="100%"
           maxW="1140px"
@@ -45,48 +44,47 @@ export function GeneralProjectInfos({ data }: ProjectProps) {
                 marginBottom={["40px", "80px", "100px", "100px"]}
               />
             </Flex>
-
             <Text text={data.text} />
-
-            <HStack 
+            <HStack
               paddingTop={["1rem", "1.5rem", "1.5rem", "1.5rem"]}
-              gap={["0", "4"]} 
+              gap={["0", "4"]}
               >
                 {data.redirect.map(icon => {
                   return (
-                      <IconRedirect 
+                      <IconRedirect
                         key={icon.link}
-                        href={icon.link} 
-                        icon={icon.icon} 
+                        href={icon.link}
+                        icon={icon.icon}
                       />
                   )
                 })}
             </HStack>
           </VStack>
-          
-          <VStack 
-            w="100%" 
-            justify="center" 
-            align="start" 
+      
+          <VStack
+            w="100%"
+            justify="center"
+            align="start"
             marginTop={["1rem", "1.5rem", "1.5rem", "1.5rem"]}
           >
             <HeadingChakra
               fontSize={["1rem", "1.5rem", "2rem","2rem"]}
+              color={useColorModeValue("white.100", "gray.300")}
               mb={["1rem", "1.5rem", "2rem", "2rem"]}
-              mt={["2rem", "3rem", "4rem", "4rem"]} 
+              mt={["2rem", "3rem", "4rem", "4rem"]}
             >
-              Tecnologias utilizadas: 
+              Tecnologias utilizadas:
             </HeadingChakra>
-            
-            <Grid 
-              templateColumns={["repeat(4, 1fr)", "repeat(7, 1fr)", "repeat(10, 1fr)"]} 
+      
+            <Grid
+              templateColumns={["repeat(4, 1fr)", "repeat(7, 1fr)", "repeat(10, 1fr)"]}
               gap={["0", "4"]}
             >
               {data.technology.map(icon => {
                 return (
-                  <IconTechnologies 
+                  <IconTechnologies
                     key={icon.icon.url}
-                    icon={icon.icon.url} 
+                    icon={icon.icon.url}
                     label={icon.icon.field}
                   />
                 )
@@ -94,7 +92,6 @@ export function GeneralProjectInfos({ data }: ProjectProps) {
             </Grid>
           </VStack>
         </Flex>
-
     </>
   );
 }

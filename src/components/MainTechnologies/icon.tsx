@@ -1,4 +1,4 @@
-import { Heading, Image, GridItem, ChakraProps, Icon as IconChakra } from '@chakra-ui/react'
+import { Heading, Image, GridItem, ChakraProps, Icon as IconChakra, useColorModeValue } from '@chakra-ui/react'
 
 
 interface IconProps extends ChakraProps {
@@ -24,7 +24,10 @@ export function Icon({ icon, title, ...rest }: IconProps) {
         w={["80px", "80px", "100px", "100px"]}  
       />
 
-      <Heading fontSize="16px" marginTop="18px">
+      <Heading 
+        fontSize="16px" 
+        marginTop="18px" 
+        color={useColorModeValue("white.100", "gray.300")}>
         {title}
       </Heading>
     </GridItem>

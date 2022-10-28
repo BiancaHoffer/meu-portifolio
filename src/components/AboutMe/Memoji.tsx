@@ -1,4 +1,4 @@
-import { Flex, GridItem, Image } from '@chakra-ui/react';
+import { Flex, GridItem, Image, useColorModeValue } from '@chakra-ui/react';
 
 export function Memoji() {
   return (
@@ -7,12 +7,13 @@ export function Memoji() {
         justifyContent={["center", "center", "center", "flex-end"]}
       >
         <Flex 
-          bgColor="gray.400" 
+           bgColor={useColorModeValue("gray.400", "gray.100")} 
           h={["200px", "240px", "280px", "280px"]} 
           w={["200px", "240px", "280px", "280px"]} 
           borderRadius="50%"
           justify="center"
           align="center"
+          boxShadow='xl'
           data-aos="zoom-in"
         >
           <Image 

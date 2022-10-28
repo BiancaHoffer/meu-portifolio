@@ -12,9 +12,11 @@ export function IconRedirect({ icon, href }: IconRedirectProps) {
         <LinkChakra isExternal variant='with-shadow'>
             <Image 
               src={icon}
+              alt={`Ícone que redireciona para ${href}`}
               w={["1.5rem", "2.5rem"]}
               h={["1.5rem", "2.5rem"]}
               color="white"
+              data-aos="zoom-in"
             />
         </LinkChakra>
     </Link>

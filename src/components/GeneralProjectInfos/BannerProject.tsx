@@ -14,15 +14,15 @@ export function BannerProject({ src }: BannerProjectProps) {
     <>
       {!isMediumAndSmallVersion && (
         <Flex
-          bgColor="gray.400"
+          bgColor="pink.500"
           w="100%"
-          h="600px"
+          h={["600px", "700px"]}
           opacity="0.6"
           justify="center"
           transition="0.4s"
           _hover={{ opacity: "0.9" }}
         >
-          <Image src={src} alt="imagem projeto" objectFit="cover" width="auto" />
+          <Image src={src} alt="imagem projeto" objectFit="contain" />
         </Flex>
       )}
     </>

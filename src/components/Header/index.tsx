@@ -3,13 +3,16 @@ import {
   Grid, 
   useBreakpointValue, 
   IconButton, 
-  Icon, 
+  Icon,
+  ColorModeContext,
+  useColorModeValue, 
 } from '@chakra-ui/react';
 
 import { RiMenuLine } from 'react-icons/ri';
 
 import { useSidebarDrawer } from '../../context/SidebarDrowerContent';
 import { ButtonHeaderContacts } from '../ButtonHeaderContacts';
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
 
 import { Drawer } from './Drawer';
@@ -30,14 +33,16 @@ export function Header() {
         w="100%"
         borderBottom="1px"
         borderColor="gray.400"
-        bgColor="gray.700"
+        bgColor={useColorModeValue("gray.700", "white.100")}
+        align="center"
+        px="52px"
       >
+        <ColorModeSwitcher />
         <Flex 
           h="100px"
           w="100%"
           maxWidth="1140px"
           margin="0 auto"
-          px="52px"
           justify="end"
           align="center"
         >
@@ -61,8 +66,8 @@ export function Header() {
       as='header'
       margin="0 auto"
       borderBottom="1px"
-      borderBottomColor="gray.400"
-      bgColor="gray.700"
+      borderBottomColor={useColorModeValue("gray.400", "gray.100")}
+      bgColor={useColorModeValue("gray.700", "white.100")}
     >
       <Grid
         as='header'
@@ -75,7 +80,7 @@ export function Header() {
         alignItems="center"
         templateColumns="repeat(3, 1fr)"
       >
-        <Flex as='span'/>
+        <ColorModeSwitcher />
         <Flex justify='space-between' align="center">
           <NavLink title='Início' href="/"/>
           <NavLink title='Projetos' href="/projects"/>

@@ -3,6 +3,7 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { GeneralProjectInfos } from "../../components/GeneralProjectInfos";
 import { getPrismicClient } from "../../services/prismic";
 import { asImageSrc, asText } from "@prismicio/helpers";
+import { useColorModeValue, VStack } from "@chakra-ui/react";
 
 export default function ProjectSlug({ project }) {
   return (
@@ -10,7 +11,9 @@ export default function ProjectSlug({ project }) {
       <Head>
         <title>{`Projetos | ${project.name}`}</title>
       </Head>
+      <VStack bgColor={useColorModeValue("gray.800", "white.100")}>
         <GeneralProjectInfos data={project} />
+      </VStack>
     </>
   );
 }

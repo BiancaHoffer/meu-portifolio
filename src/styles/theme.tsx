@@ -1,15 +1,23 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, useColorModeValue, type ThemeConfig } from "@chakra-ui/react";
+
+const config: ThemeConfig = {
+    initialColorMode: 'light',
+    useSystemColorMode: false,
+  }
 
 export const theme = extendTheme({
     colors: {
         white: {
-            "100": "#F8F8F8"
+            "100": "#f1eeee"
         },
         pink: {
            "500": "#db2090"
         },
         gray: {
+            "100": "#a1a0a0",
+            "200": "#8a8888",
             "300": "#585656",
+            "350": "#3a3939",
             "400": "#282727",
             "700": "#141414",
             "800": "#111111",
