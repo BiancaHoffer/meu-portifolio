@@ -7,13 +7,13 @@ export function Memoji() {
         justifyContent={["center", "center", "center", "flex-end"]}
       >
         <Flex 
-           bgColor={useColorModeValue("gray.400", "gray.100")} 
           h={["200px", "240px", "280px", "280px"]} 
           w={["200px", "240px", "280px", "280px"]} 
           borderRadius="50%"
           justify="center"
           align="center"
           boxShadow='xl'
+          bgColor={useColorModeValue("gray.400", "gray.100")} 
           data-aos="zoom-in"
         >
           <Image 

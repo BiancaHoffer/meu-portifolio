@@ -1,5 +1,9 @@
-import { Heading, Image, GridItem, ChakraProps, Icon as IconChakra, useColorModeValue } from '@chakra-ui/react'
-
+import { 
+  Heading,
+  GridItem, 
+  ChakraProps, Icon as IconChakra, 
+  useColorModeValue 
+} from '@chakra-ui/react';
 
 interface IconProps extends ChakraProps {
   icon: any;
@@ -18,15 +22,15 @@ export function Icon({ icon, title, ...rest }: IconProps) {
       {...rest}
     >
       <IconChakra 
-        as={icon} 
-        color="pink.500" 
+        as={icon}  
         h={["80px", "80px", "100px", "100px"]} 
-        w={["80px", "80px", "100px", "100px"]}  
+        w={["80px", "80px", "100px", "100px"]}
+        color="pink.500"   
       />
 
       <Heading 
+        marginTop="18px"
         fontSize="16px" 
-        marginTop="18px" 
         color={useColorModeValue("white.100", "gray.300")}>
         {title}
       </Heading>

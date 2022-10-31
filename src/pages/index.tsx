@@ -1,15 +1,30 @@
 import Head from 'next/head';
-import { GetStaticProps } from "next"
+import { GetStaticProps } from "next";
 
-import { useColorModeValue, VStack } from '@chakra-ui/react'
+import { useColorModeValue, VStack } from '@chakra-ui/react';
 
 import { getPrismicClient } from '../services/prismic';
 import { asText } from "@prismicio/helpers"
+
 import { BannerHome } from '../components/BannerHome';
 import { MainTechnologies } from '../components/MainTechnologies';
 import { AboutMe } from '../components/AboutMe';
 
-export default function Home({ data }) {
+export interface Banner {
+  result: {
+    title: string;
+    subtitle: string;
+  }
+}
+
+export interface HomeProps {
+  data: {
+    video: string;
+    result: Banner;
+  }
+}
+
+export default function Home({ data }: HomeProps) {
   return (
     <>
       <Head>
@@ -32,18 +47,18 @@ export default function Home({ data }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const video = "/videos/galaxy.mp4"
+  const video = "/videos/galaxy.mp4";
 
-  const prismic = getPrismicClient({})
+  const prismic = getPrismicClient({});
   
-  const response = await prismic.getByType('home', {})
+  const response = await prismic.getByType('home', {});
 
   const result = response.results.map(i => {
     return {
       title: i.data.title,
       subtitle: asText(i.data.subtitle),
     }
-  })
+  });
 
   return {
     props: {

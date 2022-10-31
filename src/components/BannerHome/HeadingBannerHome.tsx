@@ -14,12 +14,12 @@ export function HeadingBannerHome({ result }: ResultProps) {
       position="relative"
       h="132px"
       zIndex="2"
-      color="white.100"
       direction="column"
       justify="center"
       align="center"
       paddingX="52px"
       paddingY="440px" 
+      color="white.100"
       data-aos="fade-down"
       sx={{
         '@media (max-width: 1600px)': { 

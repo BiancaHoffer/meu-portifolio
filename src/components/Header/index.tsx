@@ -4,7 +4,6 @@ import {
   useBreakpointValue, 
   IconButton, 
   Icon,
-  ColorModeContext,
   useColorModeValue, 
 } from '@chakra-ui/react';
 
@@ -13,7 +12,6 @@ import { RiMenuLine } from 'react-icons/ri';
 import { useSidebarDrawer } from '../../context/SidebarDrowerContent';
 import { ButtonHeaderContacts } from '../ButtonHeaderContacts';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
-
 
 import { Drawer } from './Drawer';
 import { NavLink } from './NavLink';
@@ -82,8 +80,8 @@ export function Header() {
       >
         <ColorModeSwitcher />
         <Flex justify='space-between' align="center">
-          <NavLink title='Início' href="/"/>
-          <NavLink title='Projetos' href="/projects"/>
+          <NavLink title='Início' href="/" />
+          <NavLink title='Projetos' href="/projects" />
           <ButtonHeaderContacts />
         </Flex>
       </Grid>

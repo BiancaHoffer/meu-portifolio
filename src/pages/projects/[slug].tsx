@@ -1,9 +1,12 @@
 import Head from "next/head";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { GeneralProjectInfos } from "../../components/GeneralProjectInfos";
+
+import { useColorModeValue, VStack } from "@chakra-ui/react";
+
 import { getPrismicClient } from "../../services/prismic";
 import { asImageSrc, asText } from "@prismicio/helpers";
-import { useColorModeValue, VStack } from "@chakra-ui/react";
+
+import { GeneralProjectInfos } from "../../components/GeneralProjectInfos";
 
 export default function ProjectSlug({ project }) {
   return (
@@ -55,6 +58,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       project
-    }
+    },
+    revalidate: 60 * 60 * 30
   }
 }

@@ -1,4 +1,8 @@
-import { Text as TextChakra, ChakraProps, useColorModeValue } from "@chakra-ui/react";
+import { 
+  Text as TextChakra, 
+  ChakraProps, 
+  useColorModeValue 
+} from "@chakra-ui/react";
 
 interface TextProps extends ChakraProps {
     text: string;

@@ -1,21 +1,16 @@
 import Head from "next/head";
 
-import { Flex, useColorModeValue, Button } from "@chakra-ui/react";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 import { ImageProject } from "./ImageProject";
 import { ButtonSeeMore } from "./ButtonSeeMore";
 import { Heading } from "../Heading";
 
-interface Project {
-  uid: string;
-  name: string;
-  image: {
-    url: string; 
-  };
-}
+// exported type from page Projects
+import { Projects } from "../../pages/projects";
 
 interface ProjectsProps {
-  data: Project[]
+  data: Projects[]
 }
 
 export function BannerProjectOpacity({ data }: ProjectsProps) {
@@ -44,8 +39,8 @@ export function BannerProjectOpacity({ data }: ProjectsProps) {
               >
                 <Heading
                   title={project.name}
-                  color={useColorModeValue("white.100", "gray.350")}
                   mb={["1rem", "2rem", "2.5rem"]}
+                  color={useColorModeValue("white.100", "gray.350")}
                   data-aos="zoom-in"
 
                 />

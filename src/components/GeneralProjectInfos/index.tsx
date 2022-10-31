@@ -1,4 +1,9 @@
-import { Flex, HStack, VStack, Heading as HeadingChakra, Grid, useColorModeValue } from "@chakra-ui/react";
+import { 
+  Flex, 
+  HStack, 
+  VStack, Heading as HeadingChakra, 
+  Grid, useColorModeValue 
+} from "@chakra-ui/react";
 
 import { Heading } from "../Heading";
 import { Text } from "../Text";
@@ -60,7 +65,6 @@ export function GeneralProjectInfos({ data }: ProjectProps) {
                 })}
             </HStack>
           </VStack>
-      
           <VStack
             w="100%"
             justify="center"

@@ -1,18 +1,23 @@
 import { Flex } from '@chakra-ui/react';
+
 import styles from './banner.module.scss';
 import { HeadingBannerHome } from './HeadingBannerHome';
 
-interface BannerProps {
-  data: {
-    video: string;
-    result: {
-      title: string;
-      subtitle: string; 
-    };
-  };
+interface Banner {
+  result: {
+    title: string;
+    subtitle: string;
+  }
 }
 
-export function BannerHome({ data }: BannerProps) {
+interface HomeProps {
+  data: {
+    video: string;
+    result: Banner;
+  }
+}
+
+export function BannerHome({ data }: HomeProps) {
   return (
     <Flex
       w="100%"

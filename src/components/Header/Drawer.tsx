@@ -12,7 +12,6 @@ import { NavLink } from './NavLink';
 import { useSidebarDrawer } from '../../context/SidebarDrowerContent';
 import { ButtonHeaderContacts } from '../ButtonHeaderContacts';
 
-
 export function Drawer() {
   const { isOpen, onClose } = useSidebarDrawer();
 
@@ -23,8 +22,8 @@ export function Drawer() {
         <DrawerCloseButton />
         <DrawerHeader>Navegação</DrawerHeader>
         <DrawerBody display="flex" flexDirection="column" alignItems="flex-start">
-          <NavLink title='Início' href="/"/>
-          <NavLink title='Projetos' href="/projects"/>
+          <NavLink title='Início' href="/" />
+          <NavLink title='Projetos' href="/projects" />
           <ButtonHeaderContacts />
         </DrawerBody>
       </DrawerContent>

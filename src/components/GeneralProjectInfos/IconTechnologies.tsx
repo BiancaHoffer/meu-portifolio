@@ -1,4 +1,4 @@
-import { Flex, Icon, Tooltip, Image } from "@chakra-ui/react";
+import { Flex, Tooltip, Image } from "@chakra-ui/react";
 
 interface IconTechnologiesProps {
     icon: any;

@@ -10,10 +10,10 @@ export function ButtonSeeMore({ slug }: ButtonSeeMoreProps) {
   return (
     <Button
       w="100%" 
-      justifyContent="start"
-      fontSize={["0.8rem", "1.5rem", "1.6rem", "2rem"]}
       px="1"
       h="0"
+      fontSize={["0.8rem", "1.5rem", "1.6rem", "2rem"]}
+      justifyContent="start"
       color={useColorModeValue("white.100", "gray.350")}
       variant="transparent"
       transition="0.4s"
@@ -27,7 +27,6 @@ export function ButtonSeeMore({ slug }: ButtonSeeMoreProps) {
           Saiba mais
         </LinkChakra>
       </Link>
-
       <Icon
         as={BsArrowRightCircle}
         w={["0.5rem", "1.5rem", "1.6rem"]}

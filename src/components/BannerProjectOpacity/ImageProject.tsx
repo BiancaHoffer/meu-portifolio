@@ -1,4 +1,4 @@
-import { Image, Flex, useColorModeValue } from "@chakra-ui/react";
+import { Image, useColorModeValue } from "@chakra-ui/react";
 
 interface ImageProjectProps {
   src: string;

@@ -13,12 +13,12 @@ export function BannerProject({ src }: BannerProjectProps) {
   return (
     <>
       {!isMediumAndSmallVersion && (
-        <Flex
-          bgColor="pink.500"
+        <Flex 
           w="100%"
           h={["600px", "700px"]}
-          opacity="0.6"
           justify="center"
+          opacity="0.6"
+          bgColor="pink.500"
           transition="0.4s"
           _hover={{ opacity: "0.9" }}
         >

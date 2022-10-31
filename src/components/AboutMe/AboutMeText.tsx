@@ -24,7 +24,6 @@ export function AboutMeText() {
           '  
           w={["100%", "100%", "600px", "600px"]}
         />
-        
       </GridItem>
   );
 }

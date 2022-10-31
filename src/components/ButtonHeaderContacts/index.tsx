@@ -6,10 +6,14 @@ import {
   PopoverContent,
   PopoverBody,
   useColorModeValue,
-
 } from '@chakra-ui/react';
 
-import { AiFillCaretDown, AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp } from "react-icons/ai";
+import { 
+  AiFillCaretDown, 
+  AiFillGithub, 
+  AiFillLinkedin, 
+  AiOutlineWhatsApp 
+} from "react-icons/ai";
 
 import { LinkContact } from './LinkContact';
 
@@ -18,13 +22,15 @@ export function ButtonHeaderContacts() {
     <Popover>
       <PopoverTrigger>
         <Button 
-          variant='solid' 
-          colorScheme='transparent' 
           p="4px"
           fontSize={["1rem", "1.2rem"]}
+          variant='solid' 
+          colorScheme='transparent' 
           color={useColorModeValue("gray.300", "gray.200")}
           transition="0.4s"
-          _hover={{ color:useColorModeValue('white.100', "gray.100") }}
+          _hover={{ 
+            color:useColorModeValue('white.100', "gray.100") 
+          }}
         >
           Contato
           <Icon 
@@ -35,7 +41,12 @@ export function ButtonHeaderContacts() {
         </Button>
       </PopoverTrigger>
       
-      <PopoverContent boxShadow='xl' width="200px" bgColor={useColorModeValue("gray.400", "gray.300")} border="none">
+      <PopoverContent 
+        width="200px"
+        border="none" 
+        boxShadow='xl' 
+        bgColor={useColorModeValue("gray.400", "gray.300")} 
+      >
         <PopoverBody display="flex" flexDir="column">
           <LinkContact 
             name='GitHub' 

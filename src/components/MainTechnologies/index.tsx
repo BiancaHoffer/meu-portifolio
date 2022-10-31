@@ -1,6 +1,9 @@
-import { Flex, Grid, VStack  } from '@chakra-ui/react'
+import { Flex, Grid, VStack  } from '@chakra-ui/react';
+
 import { Icon } from './icon';
-import { SiTypescript, SiReact, SiCss3, SiHtml5 } from 'react-icons/si'
+
+import { SiTypescript, SiReact, SiCss3, SiHtml5 } from 'react-icons/si';
+
 import { Heading } from '../Heading';
 
 export function MainTechnologies() {

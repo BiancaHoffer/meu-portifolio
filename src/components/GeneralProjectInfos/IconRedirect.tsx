@@ -1,4 +1,4 @@
-import { Flex, Icon, Tooltip, Link as LinkChakra, Image  } from "@chakra-ui/react";
+import { Link as LinkChakra, Image } from "@chakra-ui/react";
 import Link from "next/link";
 
 interface IconRedirectProps {

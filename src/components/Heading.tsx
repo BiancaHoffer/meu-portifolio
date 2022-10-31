@@ -1,8 +1,10 @@
-import { ChakraProps, Heading as HeadingChakra, useColorModeValue } from "@chakra-ui/react";
+import { 
+  ChakraProps, Heading as HeadingChakra, 
+  useColorModeValue 
+} from "@chakra-ui/react";
 
 interface HeadingProps extends ChakraProps {
     title: string;
-
 }
 
 export function Heading({ title, ...spreed }: HeadingProps) {

@@ -13,7 +13,6 @@ import { Header } from '../components/Header';
 import { SidebarDrowerProvider } from "../context/SidebarDrowerContent";
 import { Footer } from "../components/Footer";
 
-
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => { 
     Aos.init({ duration: 1000 });
