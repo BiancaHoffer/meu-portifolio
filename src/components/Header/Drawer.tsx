@@ -4,7 +4,8 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton, 
+  DrawerCloseButton,
+  useColorModeValue, 
 } from '@chakra-ui/react';
 
 import { NavLink } from './NavLink';
@@ -18,9 +19,11 @@ export function Drawer() {
   return (
     <DrawerChakra isOpen={isOpen} onClose={onClose} placement='right'>
       <DrawerOverlay />
-      <DrawerContent bgColor="gray.800" p="4">
+      <DrawerContent bgColor={useColorModeValue("gray.800", "white.100")} p="4">
         <DrawerCloseButton />
-        <DrawerHeader>Navegação</DrawerHeader>
+        <DrawerHeader color={useColorModeValue("gray.300", "gray.200")}>
+          Navegação
+        </DrawerHeader>
         <DrawerBody display="flex" flexDirection="column" alignItems="flex-start">
           <NavLink title='Início' href="/" />
           <NavLink title='Projetos' href="/projects" />

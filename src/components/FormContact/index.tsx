@@ -1,5 +1,115 @@
+import { useState, FormEvent } from 'react';
+import { Grid, GridItem,VStack, useToast } from "@chakra-ui/react";
+import { Input } from './Input';
+import { TextArea } from './TextArea';
+import { Heading } from '../Heading';
+import { ButtonPink } from '../ButtonPink';
+import { sendContactEmail } from '../../services/sendEmail';
+
 export function FormContact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const toast = useToast();
+
+  async function handleSubmit(event: FormEvent) {
+    event.preventDefault();
+
+    try {
+      if (!name || !email  || !message) {
+        toast({
+          title: 'Erro ao enviar mensagem',
+          description: "Por favor, preencha todos os campos.",
+          status: 'error',
+          duration: 6000,
+          position: "top",
+          isClosable: true,
+        })
+        return;
+      } 
+        
+      toast({
+        title: 'Mensagem enviada',
+        description: "Sua mensagem foi enviada com sucesso, logo retornaremos.",
+        status: 'success',
+        duration: 6000,
+        position: "top",
+        isClosable: true,
+      })
+   
+      await sendContactEmail(name, email, message);
+
+    } catch (error) {
+      toast({
+        title: 'Erro ao enviar mensagem',
+        description: "Ocorreu um erro ao enviar sua mensagem, tente novamente.",
+        status: 'error',
+        duration: 6000,
+        position: "top",
+        isClosable: true,
+      })
+    } finally {
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
+  }
+
   return (
-    <h1>Form contact</h1>
+    <VStack
+      w="100%"
+      maxWidth="1140px"
+      marginX="0 auto"
+      paddingY={["80px", "140px", "200px", "200px"]}
+      px="52px"
+      data-aos="fade-up"
+    >
+      <Heading
+        title='Entre em contato' 
+        textAlign={["center", "center", "start", "start"]}
+        marginBottom={["40px", "80px", "100px", "100px"]}
+      />
+
+      <Grid 
+        as="form" 
+        onSubmit={handleSubmit} 
+        w="100%"
+        templateColumns={["repeat(2, 1fr)"]}
+        gap={8}
+        data-aos="zoom-in"
+      >
+          <GridItem>
+            <Input 
+              value={name} 
+              onChange={(e) => setName(e.target.value)} 
+              placeholder="Nome" 
+              type="text" 
+            />
+          </GridItem>
+
+          <GridItem>
+            <Input 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              placeholder="E-mail" 
+              type="email" 
+            />
+          </GridItem>
+
+          <GridItem colSpan={2}>
+            <TextArea 
+              value={message} 
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Insira sua mensagem" 
+            />
+          </GridItem>
+          
+          <GridItem>
+            <ButtonPink type="submit" title="Enviar"/>
+          </GridItem>
+      </Grid>
+    </VStack>
   );
 }

@@ -50,7 +50,7 @@ export function Header() {
             h="1.5rem"
             colorScheme="gray.400"
             _focus={{ background:"transparent" }}
-            icon={<Icon as={RiMenuLine} w="1.2rem" h="1.2rem" color="white.100" />}
+            icon={<Icon as={RiMenuLine} w="1.2rem" h="1.2rem" color={useColorModeValue("gray.300", "gray.200")} />}
             onClick={onOpen}
           />
           <Drawer />

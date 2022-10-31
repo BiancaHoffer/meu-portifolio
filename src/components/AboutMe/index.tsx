@@ -13,12 +13,12 @@ export function AboutMe() {
         borderBottom="1px"
         borderColor={useColorModeValue("gray.400", "gray.100")}
         bgColor={useColorModeValue("gray.800", "white.100")}
+        data-aos="fade-up"
       >   
         <Grid 
           alignItems="center" 
           templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)"]}
           gap={8}
-          data-aos="fade-up"
         >
           <AboutMeText />
           <Memoji />

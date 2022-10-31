@@ -9,6 +9,7 @@ import { asText } from "@prismicio/helpers"
 import { BannerHome } from '../components/BannerHome';
 import { MainTechnologies } from '../components/MainTechnologies';
 import { AboutMe } from '../components/AboutMe';
+import { FormContact } from '../components/FormContact';
 
 export interface Banner {
   result: {
@@ -41,6 +42,7 @@ export default function Home({ data }: HomeProps) {
         <BannerHome data={data} />
         <AboutMe />
         <MainTechnologies />
+        <FormContact />
       </VStack>
     </>
   )

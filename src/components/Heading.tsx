@@ -10,6 +10,7 @@ interface HeadingProps extends ChakraProps {
 export function Heading({ title, ...spreed }: HeadingProps) {
   return (
     <HeadingChakra
+        w="100%"
         fontSize={["1.5rem", "2.5rem", "3.5rem", "4.5rem"]}
         color={useColorModeValue("white.100", "gray.300")}
         {...spreed}

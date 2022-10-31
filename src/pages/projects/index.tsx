@@ -32,8 +32,8 @@ interface ProjectsProps {
 }
 
 export default function Projects({ projects }: ProjectsProps) { 
-  const [projectsList, setProjectsList] = useState(projects.projectsData);
-  const [nextPage, setNextPage] = useState(projects.next_page);
+  const [projectsList, setProjectsList] = useState<Projects[]>(projects.projectsData);
+  const [nextPage, setNextPage] = useState<string | null>(projects.next_page);
 
   async function handleLoadProjects() {
     const response = await axios.get(nextPage)
@@ -81,11 +81,12 @@ export default function Projects({ projects }: ProjectsProps) {
                 aria-label='Carregar mais posts' 
                 onClick={handleLoadProjects}
                 size="md"
-                variant="ghost"
-                color={useColorModeValue("gray.300", "gray.200")}
-                colorScheme="transparent"
+                variant="solid"
+                color="white.100"
+                colorScheme="pink.400"
+                bgColor="pink.500"
                 transition="0.4s"
-                _hover={{ color: useColorModeValue("white.100", "gray.100") }}
+                _hover={{ filter: 'brightness(0.8)' }}
               />
             )}
         </Flex>
@@ -94,7 +95,7 @@ export default function Projects({ projects }: ProjectsProps) {
   );
 }
 
-function parseData(response: any) {
+function parseData(response) {
   const parsed = response.results.map((project) => {
     return {
       uid: project.uid,
@@ -133,8 +134,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const { next_page, } = response;
 
   const projects = { next_page, projectsData };
-
-  console.log(projects.next_page)
 
   return {
     props: { 

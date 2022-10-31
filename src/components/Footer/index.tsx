@@ -7,6 +7,7 @@ import {
   Button, Link as LinkChakra, 
   useColorModeValue 
 } from "@chakra-ui/react";
+import { ButtonPink } from "../ButtonPink";
 
 export function Footer() {
   const { asPath } = useRouter();
@@ -23,22 +24,10 @@ export function Footer() {
       bgColor={useColorModeValue("gray.700", "white.100")}
       alignItems="center"
     >
-      <Flex mb="32px">
+      <Flex mb="32px" data-aos="zoom-in">
         <Link href={asPath}>
           <LinkChakra _hover={{ textDecoration: "none" }}>
-            <Button
-              w="120px" 
-              mx="8px"
-              bgColor={useColorModeValue("gray.400", "pink.500")}
-              color={useColorModeValue("white.100", "white.100")}
-              colorScheme="gray.400"
-              boxShadow={useColorModeValue('none', 'xl')}
-              transition="0.3s" 
-              _hover={{ filter: 'brightness(0.9)' }} 
-              data-aos="zoom-in"
-            >
-              Volta ao topo
-            </Button>
+            <ButtonPink type="button" title="Voltar ao topo" />
           </LinkChakra>
         </Link>
         
@@ -48,19 +37,7 @@ export function Footer() {
                 textDecoration: "none" 
               }}
             >
-              <Button 
-                w="120px"
-                mx="8px" 
-                bgColor={useColorModeValue("gray.400", "pink.500")}
-                color={useColorModeValue("white.100", "white.100")}
-                colorScheme="gray.400"
-                boxShadow={useColorModeValue('none', 'xl')}
-                transition="0.2s" 
-                _hover={{ filter: 'brightness(0.9)'}}
-                data-aos="zoom-in"
-              >
-                Projetos
-              </Button>
+              <ButtonPink type="button" title="Projetos" ml="16px" />
             </LinkChakra>
           </Link>
         ): ''}

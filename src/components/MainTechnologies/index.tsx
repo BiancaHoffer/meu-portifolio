@@ -1,4 +1,4 @@
-import { Flex, Grid, VStack  } from '@chakra-ui/react';
+import { Flex, Grid, useColorModeValue, VStack  } from '@chakra-ui/react';
 
 import { Icon } from './icon';
 
@@ -14,6 +14,9 @@ export function MainTechnologies() {
       margin="0 auto"
       paddingY={["80px", "140px", "200px", "200px"]}
       px="52px"
+      borderBottom="1px"
+      borderColor={useColorModeValue("gray.400", "gray.100")}
+      bgColor={useColorModeValue("gray.800", "white.100")}
       data-aos="fade-up"
     >
       <Flex
