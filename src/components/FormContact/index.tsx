@@ -1,8 +1,13 @@
 import { useState, FormEvent } from 'react';
 
-import { Grid, GridItem,VStack, useToast, Spinner, useColorModeValue } from "@chakra-ui/react";
-
-import { useSession } from 'next-auth/react'
+import { 
+  Grid, 
+  GridItem,
+  VStack, 
+  useToast, 
+  Spinner, 
+  useColorModeValue 
+} from "@chakra-ui/react";
 
 import { Input } from './Input';
 import { TextArea } from './TextArea';
@@ -16,14 +21,14 @@ export function FormContact() {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const { data } = useSession()
-
   const toast = useToast();
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
 
     try {
+      setLoading(true);
+
       if (!name || !email  || !message) {
         toast({
           title: 'Erro ao enviar mensagem',
@@ -35,13 +40,12 @@ export function FormContact() {
         })
         return;
       } 
+
       const data = {
         name,
         email,
         message,
       }
-
-      setLoading(true)
 
       await axios.post("/api/sendMessage", data);
 
