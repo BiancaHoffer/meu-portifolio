@@ -7,8 +7,8 @@ const myEmailPass = process.env.NODEMAILER_MYEMAILPASS;
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "bianca.mhm1@gmail.com",
-    pass: "bi141269BI",
+    user: myEmail,
+    pass: myEmailPass,
   },
   host: "smtp.gmail.com",
   port: 465,
@@ -43,8 +43,6 @@ const mailer = ({ email, name, message }) => {
   }
 
   return transporter.sendMail(msg, (error, info) => {
-      error ? console.log(error) : console.log("Email send", info)
+      error ? error : info
     })
 }
-
-

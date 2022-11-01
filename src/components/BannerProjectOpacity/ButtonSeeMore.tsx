@@ -23,7 +23,7 @@ export function ButtonSeeMore({ slug }: ButtonSeeMoreProps) {
       data-aos="zoom-in"
     >
       <Link href={`/projects/${slug}`} passHref>
-        <LinkChakra _hover={{ textDecoration: "none" }}>
+        <LinkChakra as="a" _hover={{ textDecoration: "none" }}>
           Saiba mais
         </LinkChakra>
       </Link>

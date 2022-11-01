@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 
 import axios from 'axios';
 
-import { Flex, useColorModeValue, IconButton } from "@chakra-ui/react";
+import { Flex, useColorModeValue, IconButton, Button } from "@chakra-ui/react";
 import { MdOutlineAdd } from 'react-icons/md';
 
 import { getPrismicClient } from "../../services/prismic";
@@ -32,14 +32,14 @@ interface ProjectsProps {
 }
 
 export default function Projects({ projects }: ProjectsProps) { 
-  const [projectsList, setProjectsList] = useState<Projects[]>(projects.projectsData);
-  const [nextPage, setNextPage] = useState<string | null>(projects.next_page);
+  const [projectsList, setProjectsList] = useState(projects.projectsData);
+  const [nextPage, setNextPage] = useState(projects.next_page);
 
   async function handleLoadProjects() {
     const response = await axios.get(nextPage)
     const data = response.data
     const results = parseData(data)
-    setProjectsList(projects => [...projectsList, ...results])
+    setProjectsList([...projectsList, ...results])
     setNextPage(data.next_page)
   }
 
@@ -70,26 +70,28 @@ export default function Projects({ projects }: ProjectsProps) {
         bgColor={useColorModeValue("gray.800", "white.100")} 
         pb={["1rem", "2.5rem", "3rem", "3rem"]}
       >
-        <Flex 
-          w="1140px" 
-          margin="0 auto" 
-          px="52px" bgColor={useColorModeValue("gray.800", "white.100")} 
-        >
-          {nextPage && (
-              <IconButton 
-                as={MdOutlineAdd}
-                aria-label='Carregar mais posts' 
-                onClick={handleLoadProjects}
-                size="md"
-                variant="solid"
-                color="white.100"
-                colorScheme="pink.400"
-                bgColor="pink.500"
-                transition="0.4s"
-                _hover={{ filter: 'brightness(0.8)' }}
-              />
-            )}
-        </Flex>
+        {projects.next_page && (
+          <Flex 
+            w="1140px" 
+            margin="0 auto" 
+            px="52px" bgColor={useColorModeValue("gray.800", "white.100")} 
+          >
+            <Button 
+              onClick={handleLoadProjects}
+              variant="solid"
+              fontSize="2rem"
+              fontWeight="normal"
+              color="white.100"
+              colorScheme="pink.400"
+              bgColor="pink.500"
+              cursor="pointer"
+              transition="0.4s"
+              _hover={{ filter: 'brightness(0.8)' }}
+            >
+              +
+            </Button>
+          </Flex>
+        )}
       </Flex>
     </>
   );

@@ -1,16 +1,22 @@
 import { useState, FormEvent } from 'react';
+
 import { Grid, GridItem,VStack, useToast } from "@chakra-ui/react";
+
+import { useSession } from 'next-auth/react'
+
 import { Input } from './Input';
 import { TextArea } from './TextArea';
 import { Heading } from '../Heading';
 import { ButtonPink } from '../ButtonPink';
-import { sendContactEmail } from '../../services/sendEmail';
+import axios from 'axios';
 
 export function FormContact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const { data } = useSession()
 
   const toast = useToast();
 
@@ -30,6 +36,14 @@ export function FormContact() {
         return;
       } 
         
+      const data = {
+        name,
+        email,
+        message,
+      }
+
+      await axios.post("/api/sendMessage", data);
+
       toast({
         title: 'Mensagem enviada',
         description: "Sua mensagem foi enviada com sucesso, logo retornaremos.",
@@ -38,9 +52,6 @@ export function FormContact() {
         position: "top",
         isClosable: true,
       })
-   
-      await sendContactEmail(name, email, message);
-
     } catch (error) {
       toast({
         title: 'Erro ao enviar mensagem',
@@ -74,7 +85,7 @@ export function FormContact() {
 
       <Grid 
         as="form" 
-        onSubmit={handleSubmit} 
+        onSubmit={handleSubmit}
         w="100%"
         templateColumns={["repeat(2, 1fr)"]}
         gap={8}

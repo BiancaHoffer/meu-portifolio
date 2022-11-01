@@ -1,3 +1,5 @@
+import React, { ForwardRefRenderFunction } from 'react';
+
 import { 
   FormControl, 
   FormHelperText, 
@@ -11,11 +13,12 @@ interface InputProps extends InputPropsChakra {
   helperText?: string;  
 }
 
-export function Input({ placeholder, helperText, ...props }: InputProps) {
+export const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({ placeholder, helperText, ...props }, ref) => {
   return (
     <FormControl>
       <InputChakra 
         placeholder={placeholder}
+        ref={ref}
         p="1.5rem" 
         focusBorderColor="pink.500"
         color={useColorModeValue("white.100", "gray.300")}
@@ -29,3 +32,5 @@ export function Input({ placeholder, helperText, ...props }: InputProps) {
     </FormControl>
   );
 }
+
+export const Input = React.forwardRef(InputBase)
