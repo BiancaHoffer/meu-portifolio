@@ -20,6 +20,7 @@ export const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> =
         placeholder={placeholder}
         ref={ref}
         p="1.5rem" 
+        fontSize={["1rem", "1rem", "1.3rem","1.3rem"]}
         focusBorderColor="pink.500"
         color={useColorModeValue("white.100", "gray.300")}
         borderColor={useColorModeValue("gray.400", "gray.100")}

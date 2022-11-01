@@ -14,6 +14,7 @@ export function TextArea({ placeholder, ...props }: TextAreaProps) {
       placeholder={placeholder}
       _placeholder={{ color:useColorModeValue('gray.300', "gray.100")}}
       p="1.5rem" 
+      fontSize={["1rem", "1rem", "1.3rem","1.3rem"]}
       focusBorderColor="pink.500"
       color={useColorModeValue("white.100", "gray.300")}
       borderColor={useColorModeValue("gray.400", "gray.100")}

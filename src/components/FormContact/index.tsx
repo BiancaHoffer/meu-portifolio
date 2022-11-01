@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 
-import { Grid, GridItem,VStack, useToast } from "@chakra-ui/react";
+import { Grid, GridItem,VStack, useToast, Spinner, useColorModeValue } from "@chakra-ui/react";
 
 import { useSession } from 'next-auth/react'
 
@@ -35,12 +35,13 @@ export function FormContact() {
         })
         return;
       } 
-        
       const data = {
         name,
         email,
         message,
       }
+
+      setLoading(true)
 
       await axios.post("/api/sendMessage", data);
 
@@ -65,6 +66,7 @@ export function FormContact() {
       setName('');
       setEmail('');
       setMessage('');
+      setLoading(false)
     }
   }
 
@@ -118,7 +120,11 @@ export function FormContact() {
           </GridItem>
           
           <GridItem>
-            <ButtonPink type="submit" title="Enviar"/>
+            <ButtonPink 
+              type="submit" 
+              title={ loading === true ? <Spinner color={useColorModeValue("white.100", "gray.300")} /> : "Enviar"} 
+              disabled={loading && true} 
+            />
           </GridItem>
       </Grid>
     </VStack>
