@@ -19,10 +19,10 @@ import {
         onClick={toggleColorMode}
         icon={<SwitchIcon />}
         aria-label={`Switch to ${text} mode`}
-        w="fit-content"
+        w="1.2rem" 
+        h="1.2rem"
         marginLeft="2"
         fontSize="lg"
-        size="md"
         variant="ghost"
         color={useColorModeValue("gray.300", "gray.200")}
         colorScheme='transparent'
