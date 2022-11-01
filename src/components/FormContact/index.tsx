@@ -130,7 +130,6 @@ export function FormContact() {
               disabled={loading && true} 
             />
           </GridItem>
-          a
       </Grid>
     </VStack>
   );
