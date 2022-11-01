@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 
 import axios from 'axios';
 
-import { Flex, useColorModeValue, Icon } from "@chakra-ui/react";
+import { Flex, useColorModeValue, Icon, Spinner } from "@chakra-ui/react";
 import { MdOutlineAdd } from 'react-icons/md';
 
 import { getPrismicClient } from "../../services/prismic";
@@ -35,14 +35,22 @@ interface ProjectsProps {
 export default function Projects({ projects }: ProjectsProps) { 
   const [projectsList, setProjectsList] = useState(projects.projectsData);
   const [nextPage, setNextPage] = useState(projects.next_page);
+  const [loading, setLoading] = useState(false);
 
   async function handleLoadProjects() {
+    try {
+    setLoading(true);
     const response = await axios.get(nextPage)
     const data = response.data
     const results = parseData(data)
     setProjectsList([...projectsList, ...results])
     setNextPage(data.next_page)
+    } finally {
+      setLoading(false);
+    }
   }
+
+  console.log(loading)
 
   return (
     <>
@@ -72,15 +80,26 @@ export default function Projects({ projects }: ProjectsProps) {
         pb={["1rem", "2.5rem", "3rem", "3rem"]}
       >
         {nextPage && (
-          <Flex w="1140px" px="52px" margin="0 auto">
-            <ButtonPink onClick={handleLoadProjects}>
-              <Icon 
-                as={MdOutlineAdd} 
-                w={8} 
-                h={8} 
-                color={useColorModeValue("white.100", "white.100")} 
-              />
-            </ButtonPink>
+          <Flex 
+            w="1140px" 
+            px="52px" 
+            margin="0 auto" 
+            pb={["1rem", "2.5rem", "3rem", "3rem"]}
+          >
+            { loading === true ? 
+              <ButtonPink disabled={ loading && true }>
+                <Spinner color={useColorModeValue("white.100", "gray.300")} /> 
+              </ButtonPink>
+            :
+              <ButtonPink onClick={handleLoadProjects}>
+                <Icon 
+                  as={MdOutlineAdd} 
+                  w={8} 
+                  h={8} 
+                  color={useColorModeValue("white.100", "white.100")} 
+                />
+              </ButtonPink>
+            }
           </Flex>
         )}
       </Flex>
@@ -124,7 +143,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }) 
 
-  const { next_page, } = response;
+  const { next_page } = response;
 
   const projects = { next_page, projectsData };
 
