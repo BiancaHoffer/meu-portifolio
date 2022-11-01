@@ -5,13 +5,14 @@ import { GetStaticProps } from "next";
 
 import axios from 'axios';
 
-import { Flex, useColorModeValue, IconButton, Button } from "@chakra-ui/react";
+import { Flex, useColorModeValue, Icon } from "@chakra-ui/react";
 import { MdOutlineAdd } from 'react-icons/md';
 
 import { getPrismicClient } from "../../services/prismic";
 import { asImageSrc } from "@prismicio/helpers";
 import { HeadingProject } from "../../components/BannerProjectOpacity/HeadingProject";
 import { BannerProjectOpacity } from "../../components/BannerProjectOpacity";
+import { ButtonPink } from '../../components/ButtonPink';
 
 
 export interface Projects {
@@ -70,26 +71,16 @@ export default function Projects({ projects }: ProjectsProps) {
         bgColor={useColorModeValue("gray.800", "white.100")} 
         pb={["1rem", "2.5rem", "3rem", "3rem"]}
       >
-        {projects.next_page && (
-          <Flex 
-            w="1140px" 
-            margin="0 auto" 
-            px="52px" bgColor={useColorModeValue("gray.800", "white.100")} 
-          >
-            <Button 
-              onClick={handleLoadProjects}
-              variant="solid"
-              fontSize="2rem"
-              fontWeight="normal"
-              color="white.100"
-              colorScheme="pink.400"
-              bgColor="pink.500"
-              cursor="pointer"
-              transition="0.4s"
-              _hover={{ filter: 'brightness(0.8)' }}
-            >
-              +
-            </Button>
+        {nextPage && (
+          <Flex w="1140px" px="52px" margin="0 auto">
+            <ButtonPink onClick={handleLoadProjects}>
+              <Icon 
+                as={MdOutlineAdd} 
+                w={8} 
+                h={8} 
+                color={useColorModeValue("white.100", "white.100")} 
+              />
+            </ButtonPink>
           </Flex>
         )}
       </Flex>

@@ -93,11 +93,11 @@ export function FormContact() {
         as="form" 
         onSubmit={handleSubmit}
         w="100%"
-        templateColumns={["repeat(2, 1fr)"]}
+        templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
         gap={8}
         data-aos="zoom-in"
       >
-          <GridItem>
+          <GridItem colSpan={[2, 1]}>  
             <Input 
               value={name} 
               onChange={(e) => setName(e.target.value)} 
@@ -106,7 +106,7 @@ export function FormContact() {
             />
           </GridItem>
 
-          <GridItem>
+          <GridItem colSpan={[2, 1]}>
             <Input 
               value={email} 
               onChange={(e) => setEmail(e.target.value)} 
@@ -123,11 +123,12 @@ export function FormContact() {
             />
           </GridItem>
           
-          <GridItem>
-            <ButtonPink 
+          <GridItem colSpan={2}>
+            <ButtonPink
+              w={["100%", "auto"]}
               type="submit" 
-              title={ loading === true ? <Spinner color={useColorModeValue("white.100", "gray.300")} /> : "Enviar"} 
-              disabled={loading && true} 
+              disabled={ loading && true }
+              children={ loading === true ? <Spinner color={useColorModeValue("white.100", "gray.300")} /> : "Enviar"}  
             />
           </GridItem>
       </Grid>

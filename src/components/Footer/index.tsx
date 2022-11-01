@@ -27,7 +27,9 @@ export function Footer() {
       <Flex mb="32px" data-aos="zoom-in">
         <Link href={asPath}>
           <LinkChakra _hover={{ textDecoration: "none" }}>
-            <ButtonPink type="button" title="Voltar ao topo" />
+            <ButtonPink type="button" title="Voltar ao topo">
+              Voltar ao topo
+            </ButtonPink>
           </LinkChakra>
         </Link>
         
@@ -37,7 +39,9 @@ export function Footer() {
                 textDecoration: "none" 
               }}
             >
-              <ButtonPink type="button" title="Projetos" ml="16px" />
+              <ButtonPink type="button" title="Projetos" ml="16px">
+                Projetos
+              </ButtonPink>
             </LinkChakra>
           </Link>
         ): ''}
@@ -55,7 +59,7 @@ export function Footer() {
       <Text 
         py="8px" 
         textAlign="center" 
-        fontSize={["16px", "16px", "18px", "18px"]}
+        fontSize={["1rem", "1rem", "1.1rem","1.1rem"]}
         color={useColorModeValue("white.100", "gray.300")}
       >
         Todos os direitos reservados - Bianca Macedo Hoffer Madruga

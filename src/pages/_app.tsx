@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <SidebarDrowerProvider>
-        <Header />
+        <Header /> 
         <Component {...pageProps} />
         <Footer />
       </SidebarDrowerProvider>
