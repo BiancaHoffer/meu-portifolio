@@ -50,8 +50,6 @@ export default function Projects({ projects }: ProjectsProps) {
     }
   }
 
-  console.log(loading)
-
   return (
     <>
       <Head>
@@ -143,10 +141,10 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }) 
 
-  const { next_page } = response;
+  const { next_page,  } = response;
 
   const projects = { next_page, projectsData };
-
+  
   return {
     props: { 
       projects
