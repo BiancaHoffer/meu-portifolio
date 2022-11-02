@@ -15,7 +15,7 @@ export function ButtonPink({ children, ...props }: ButtonPinkProps) {
       colorScheme="gray.400"
       boxShadow={useColorModeValue('none', 'xl')}
       transition="0.4s" 
-      p="1.5rem"
+      p={["1rem", "1.5rem"]}
       _hover={{ filter: 'brightness(0.9)'}}
       {...props}
     >

@@ -92,8 +92,8 @@ export default function Projects({ projects }: ProjectsProps) {
               <ButtonPink onClick={handleLoadProjects}>
                 <Icon 
                   as={MdOutlineAdd} 
-                  w={8} 
-                  h={8} 
+                  w={[4, 8]} 
+                  h={[4, 8]} 
                   color={useColorModeValue("white.100", "white.100")} 
                 />
               </ButtonPink>

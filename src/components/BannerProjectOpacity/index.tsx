@@ -28,8 +28,6 @@ export function BannerProjectOpacity({ data }: ProjectsProps) {
             <Flex 
               key={project.uid}
               w="100%"
-              maxH="100%" 
-              //maxH={["280px", "400px", "600px", "800px"]}
               margin="0 auto"
               position="relative" 
               borderTop="1px" 
