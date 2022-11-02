@@ -1,13 +1,13 @@
-import { Link as LinkChakra, useColorModeValue } from '@chakra-ui/react';
+import { ChakraProps, Link as LinkChakra, useColorModeValue } from '@chakra-ui/react';
 
 import Link from 'next/link';
 
-interface NavLinkProps {
+interface NavLinkProps extends ChakraProps {
   title: string;
   href: string;
 }
 
-export function NavLink({ title, href }: NavLinkProps) {
+export function NavLink({ title, href, ...props }: NavLinkProps) {
   return (
     <Link href={href} passHref>
         <LinkChakra 
@@ -20,6 +20,7 @@ export function NavLink({ title, href }: NavLinkProps) {
               textDecoration: 'none', 
               color:useColorModeValue('white.100', "gray.100")
             }}
+            {...props}
         >
             {title}
         </LinkChakra>

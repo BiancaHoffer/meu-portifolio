@@ -8,8 +8,8 @@ export function ImageProject({ src }: ImageProjectProps) {
   return (
       <Image
           src={src}
-          w="100%"
-          h="100%"
+          maxW="100%"
+          maxH="100%"
           alt="imagem projeto"
           borderRadius="4px"
           boxShadow={useColorModeValue('none', 'xl')}

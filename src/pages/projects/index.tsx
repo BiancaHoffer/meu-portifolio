@@ -39,12 +39,12 @@ export default function Projects({ projects }: ProjectsProps) {
 
   async function handleLoadProjects() {
     try {
-    setLoading(true);
-    const response = await axios.get(nextPage)
-    const data = response.data
-    const results = parseData(data)
-    setProjectsList([...projectsList, ...results])
-    setNextPage(data.next_page)
+      setLoading(true);
+      const response = await axios.get(nextPage);
+      const data = response.data;
+      const results = parseData(data);
+      setProjectsList([...projectsList, ...results]);
+      setNextPage(data.next_page);
     } finally {
       setLoading(false);
     }
@@ -127,7 +127,7 @@ export const getStaticProps: GetStaticProps = async () => {
       direction: 'desc',
     },
     fetch: ['project.name', 'project.image'],
-    pageSize: 4,
+    pageSize: 3,
     page: 1,
   })
 

@@ -27,13 +27,16 @@ export function BannerProjectOpacity({ data }: ProjectsProps) {
           return (
             <Flex 
               key={project.uid}
-              w="100%" 
-              h={["260px", "400px", "600px", "800px"]}
-              border="1px"
+              w="100%"
+              maxH="100%" 
+              //maxH={["280px", "400px", "600px", "800px"]}
+              margin="0 auto"
               position="relative" 
               borderTop="1px" 
               borderColor={useColorModeValue("gray.400", "gray.100")}
               paddingY={["60px", "100px", "140px", "140px"]}
+              justifyContent="start"
+              align="top"
             >
               <ImageProject src={project.image.url} />
               
