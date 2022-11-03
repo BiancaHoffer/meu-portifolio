@@ -17,7 +17,7 @@ export function AboutMeText() {
         />
 
         <Text text='
-          Sou desenvolvera desde 2021, focada em web e mobile. Sempre busco criar páginas modernas e 
+          Sou desenvolvedora desde 2021, focada em web e mobile. Sempre busco criar páginas modernas e 
           dinâmicas.
           Dedico o máximo do meu tempo para aprender as principais tecnologias do mercado front-end 
           e aplicar em meus projetos.
