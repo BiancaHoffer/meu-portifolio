@@ -14,7 +14,7 @@ export function ButtonSeeMore({ slug }: ButtonSeeMoreProps) {
       h="0"
       fontSize={["0.8rem", "1.5rem", "1.6rem", "2rem"]}
       justifyContent="start"
-      color={useColorModeValue("white.100", "gray.350")}
+      color={useColorModeValue("white.100", "gray.400")}
       variant="transparent"
       transition="0.4s"
       _hover={{

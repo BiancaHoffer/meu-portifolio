@@ -42,7 +42,7 @@ export function GeneralProjectInfos({ data }: ProjectProps) {
           flexDir="column"
           paddingY={["80px", "140px", "200px", "200px"]}
         >
-          <VStack w="100%" justify="center" align="start">
+          <VStack w="100%" justify="center" align="start" data-aos="top-in">
             <Flex flexDir="column">
               <Heading
                 title={data.name}

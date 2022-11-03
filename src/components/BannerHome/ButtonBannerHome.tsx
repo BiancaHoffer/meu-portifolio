@@ -16,13 +16,15 @@ export function ButtonBannerHome() {
             p={["20px", "28px", "32px", "32px"]}
             borderRadius="4px"
             boxShadow='xl'
-            colorScheme="gray.800"
-            bgColor={useColorModeValue("gray.700", "white.100")}
-            color={useColorModeValue("white.100", "gray.300")}
+            colorScheme="pink.500"
+            bgColor={useColorModeValue("pink.500", "pink.500")}
+            color={useColorModeValue("white.100", "white.100")}
+            border="1px"
+            borderColor="white.100"
             transition="0.4s"
             _hover={{
                 filter: 'brightness(0.8)',
-                transition: "0.4s"
+                transition: "0.4s",
             }}
         >
             Projetos

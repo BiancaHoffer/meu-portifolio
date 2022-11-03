@@ -13,7 +13,7 @@ export function ImageProject({ src }: ImageProjectProps) {
           alt="imagem projeto"
           borderRadius="4px"
           boxShadow={useColorModeValue('none', 'xl')}
-          opacity={useColorModeValue("0.2", "0.3")}
+          opacity={useColorModeValue("0.3", "0.4")}
           transition="0.8s"
           _hover={{
             opacity: "0.6",

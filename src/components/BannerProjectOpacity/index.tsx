@@ -29,28 +29,29 @@ export function BannerProjectOpacity({ data }: ProjectsProps) {
               key={project.uid}
               w="100%"
               margin="0 auto"
-              position="relative" 
+              
               borderTop="1px" 
               borderColor={useColorModeValue("gray.400", "gray.100")}
               paddingY={["60px", "100px", "140px", "140px"]}
               justifyContent="start"
               align="top"
             >
-              <ImageProject src={project.image.url} />
-              
-              <Flex
-                position="absolute"
-                flexDir="column"
-                margin={["1rem", "1.5rem", "2rem", "2rem"]}
-              >
-                <Heading
-                  title={project.name}
-                  mb={["1rem", "2rem", "2.5rem"]}
-                  color={useColorModeValue("white.100", "gray.350")}
-                  data-aos="zoom-in"
-
-                />
-                <ButtonSeeMore slug={project.uid}/>
+              <Flex position="relative" maxW="1140px">
+                <ImageProject src={project.image.url} />
+                
+                <Flex
+                  position="absolute"
+                  flexDir="column"
+                  margin={["1rem", "1.5rem", "2rem", "2rem"]}
+                >
+                  <Heading
+                    title={project.name}
+                    mb={["1rem", "2rem", "2.5rem"]}
+                    color={useColorModeValue("white.100", "gray.400")}
+                    data-aos="zoom-in"
+                  />
+                  <ButtonSeeMore slug={project.uid}/>
+                </Flex>
               </Flex>
             </Flex> 
           )  

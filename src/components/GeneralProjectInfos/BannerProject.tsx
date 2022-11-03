@@ -15,7 +15,7 @@ export function BannerProject({ src }: BannerProjectProps) {
       {!isMediumAndSmallVersion && (
         <Flex 
           w="100%"
-          h={["600px", "700px"]}
+          h={["500px", "500px"]}
           justify="center"
           opacity="0.6"
           bgColor="pink.500"

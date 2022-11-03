@@ -31,7 +31,7 @@ export function HeadingBannerHome({ result }: ResultProps) {
           height: '152px'
         }, 
         '@media (max-width: 480px)': {
-          paddingY: '300px',
+          paddingY: '200px',
       }, 
     }}
   >
@@ -47,6 +47,7 @@ export function HeadingBannerHome({ result }: ResultProps) {
       fontSize={["34px", "42px", "60px", "72px"]} 
       fontWeight="500"
       textAlign="center"
+      maxW="800px"
     >
       {result.subtitle}
     </H1>
