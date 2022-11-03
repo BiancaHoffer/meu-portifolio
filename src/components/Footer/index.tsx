@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { 
   Flex, 
   Text, 
-  Button, Link as LinkChakra, 
+  Link as LinkChakra, 
   useColorModeValue 
 } from "@chakra-ui/react";
 import { ButtonPink } from "../ButtonPink";
@@ -25,14 +25,6 @@ export function Footer() {
       alignItems="center"
     >
       <Flex mb="32px" data-aos="zoom-in">
-        <Link href={asPath}>
-          <LinkChakra _hover={{ textDecoration: "none" }}>
-            <ButtonPink type="button" title="Voltar ao topo">
-              Voltar ao topo
-            </ButtonPink>
-          </LinkChakra>
-        </Link>
-        
         {asPath === "/" ? (
           <Link href="/projects" passHref>
             <LinkChakra _hover={{ 

@@ -6,14 +6,14 @@
     top: 100px;
 
     @media (max-width: 1600px) {
-        height: 640px; 
+        height: 600px; 
     }
 
-    @media (max-width: 700px) {
-        height: 400px; 
+    @media (max-width: 820px) {
+        height: 800px; 
     }
 
-    @media (max-width: 400px) {
-        height: 320px; 
+    @media (max-width: 480px) {
+        height: 600px; 
     }
 }

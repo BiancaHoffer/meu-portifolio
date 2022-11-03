@@ -37,7 +37,7 @@ export function Header() {
       >
         <ColorModeSwitcher />
         <Flex 
-          h="100px"
+          h="70px"
           w="100%"
           maxWidth="1140px"
           margin="0 auto"

@@ -23,16 +23,15 @@ export function HeadingBannerHome({ result }: ResultProps) {
       data-aos="fade-down"
       sx={{
         '@media (max-width: 1600px)': { 
-          paddingY: '320px',
+          paddingY: '300px',
           height: '148px'
         }, 
-        '@media (max-width: 700px)': {
-          paddingY: '200px',
+        '@media (max-width: 820px)': {
+          paddingY: '400px',
           height: '152px'
         }, 
-        '@media (max-width: 400px)': {
-          paddingY: '160px',
-          height: '108px'
+        '@media (max-width: 480px)': {
+          paddingY: '300px',
       }, 
     }}
   >

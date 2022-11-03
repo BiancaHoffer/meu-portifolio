@@ -12,6 +12,7 @@ import '../styles/global.scss';
 import { Header } from '../components/Header';
 import { SidebarDrowerProvider } from "../context/SidebarDrowerContent";
 import { Footer } from "../components/Footer";
+import { BackToTopButton } from "../components/BackToTopButton";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => { 
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <SidebarDrowerProvider>
         <Header /> 
         <Component {...pageProps} />
+        <BackToTopButton />
         <Footer />
       </SidebarDrowerProvider>
     </ChakraProvider>
